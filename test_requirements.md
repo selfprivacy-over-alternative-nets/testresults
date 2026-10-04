@@ -94,3 +94,8 @@
 71. USB setups: a USB device is present (and empty, if emptiness is required).
 72. Wifi setups: a wifi spec (SSID, plus credentials as needed) must be specified.
 73. Verify the specified wifi is in range / yields internet only when that is possible without disturbing the current wifi connection (e.g. a scan confirms the SSID is in range; internet-through-it is not checked if that would require connecting).
+
+## Dashboard / visualization (explanatory hovers)
+74. Hovering a test group (level) or a test shows a brief explanation of what it tests (sourced from the catalog `levels`/`desc`).
+75. Hovering a ⚪ N/A cell shows a brief reason it is not available: a roadmap transport that is not implemented yet (catalog `future_networks`), or not applicable because that test does not exercise that transport.
+76. The matrix shows a sub-header row under the setup columns indicating the Local/CI split (each cell holds two dots: local, then CI).
