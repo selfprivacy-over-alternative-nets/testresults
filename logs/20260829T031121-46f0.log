@@ -1,5 +1,0 @@
-# L3.menus.desktop  net=tor on=vm-local
-# flutter test integration_test/menus_flow_test.dart -d linux --dart-define=ONION_DOMAIN=ukmcxx6hmhgzcvewjrcn4ncqw6dlyzhq3gzp4gbog62kkandmyldjfad.onion --dart-define=API_TOKEN=test-token-for-tor-development --dart-define=SOCKS_PORT=9050
-# cwd /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app
-# started 2026-08-29T01:11:23Z
-
