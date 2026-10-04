@@ -1,0 +1,314 @@
+# L3.connect.desktop  net=https on=vm-local
+# flutter test integration_test/connect_flow_test.dart -d linux --dart-define=HTTPS_DOMAIN=127.0.0.1.nip.io:8443 --dart-define=API_TOKEN=test-token-for-tor-development
+# cwd /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app
+# started 2026-08-29T01:02:27Z
+
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 85.0.0 (105.0.0 available)
+  analyzer 7.6.0 (14.1.0 available)
+  analyzer_plugin 0.13.1 (0.14.14 available)
+  animations 2.0.11 (3.0.0 available)
+  archive 3.6.1 (4.2.0 available)
+  async 2.13.0 (2.13.1 available)
+  auto_route 10.1.0+1 (11.1.0 available)
+  auto_route_generator 10.2.3 (10.6.0 available)
+! bloc 9.0.0 (overridden) (9.2.1 available)
+  build 2.5.4 (4.0.10 available)
+  build_config 1.1.1 (1.3.2 available)
+  build_daemon 4.0.2 (4.1.5 available)
+  build_resolvers 2.5.4 (3.0.4 available)
+  build_runner 2.5.4 (2.16.0 available)
+  build_runner_core 9.1.2 (9.3.2 available)
+  built_value 8.10.1 (8.12.7 available)
+  checked_yaml 2.0.3 (2.0.4 available)
+  cli_util 0.4.2 (0.6.0 available)
+  code_builder 4.10.1 (4.11.1 available)
+  connectivity_plus 6.1.4 (7.3.1 available)
+  connectivity_plus_platform_interface 2.0.1 (2.1.0 available)
+  convert 3.1.1 (3.1.2 available)
+  cross_file 0.3.4+2 (0.3.5+5 available)
+  crypto 3.0.5 (3.0.7 available)
+  cubit_form 2.0.5 (3.0.7 available)
+  cupertino_icons 1.0.8 (1.0.9 available)
+  custom_lint 0.7.5 (0.8.1 available)
+  custom_lint_builder 0.7.5 (0.8.1 available)
+  custom_lint_core 0.7.5 (0.8.2 available)
+  custom_lint_visitor 1.0.0+7.7.0 (1.0.0+9.0.0 available)
+  dart_style 3.1.0 (3.1.13 available)
+  dbus 0.7.10 (0.7.15 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.8.0+1 (5.11.0 available)
+  dio_web_adapter 2.0.0 (2.2.1 available)
+  dynamic_color 1.7.0 (2.1.0 available)
+  easy_localization 3.0.7+1 (3.0.8 available)
+  email_validator 2.1.17 (3.0.0 available)
+  equatable 2.0.7 (2.1.0 available)
+  ffi 2.1.4 (2.2.0 available)
+  fixnum 1.1.0 (1.1.1 available)
+  fl_chart 1.0.0 (1.2.0 available)
+! flutter_bloc 9.1.1 (overridden)
+  flutter_hooks 0.20.5 (0.21.3+1 available)
+  flutter_markdown 0.7.7+1 (discontinued replaced by flutter_markdown_plus)
+  flutter_plugin_android_lifecycle 2.0.21 (2.0.35 available)
+  flutter_secure_storage 9.2.4 (11.0.0 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.2 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.3 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  flutter_svg 2.2.0 (2.3.0 available)
+  get_it 8.0.3 (9.2.1 available)
+  glob 2.1.3 (2.2.0 available)
+  gql 1.0.1-alpha+1717789143880 (1.0.1 available)
+  gql_code_builder 0.13.1 (0.15.2 available)
+  gql_code_builder_serializers 0.1.0 (0.1.0+1 available)
+  gql_dedupe_link 2.0.4-alpha+1715521079596 (4.0.0 available)
+  gql_error_link 1.0.0+1 (1.0.1 available)
+  gql_http_link 1.1.0 (1.2.0 available)
+  gql_link 1.0.1-alpha+1717789143896 (1.1.0 available)
+  gql_transform_link 1.0.0 (1.0.1 available)
+  gql_tristate_value 1.0.0 (1.1.0 available)
+  graphql 5.2.1 (5.2.4 available)
+  graphql_codegen 1.2.4 (3.0.2 available)
+  graphql_flutter 5.2.0 (5.3.0 available)
+  hive_ce 2.11.3 (2.19.3 available)
+  hive_ce_flutter 2.3.1 (2.3.4 available)
+  hive_ce_generator 1.9.2 (1.11.3 available)
+  hotreloader 4.3.0 (4.4.0 available)
+  http 1.4.0 (1.6.0 available)
+  http_multi_server 3.2.1 (3.2.2 available)
+  http_parser 4.0.2 (4.1.2 available)
+  image 4.2.0 (4.9.2 available)
+  intl 0.20.2 (0.20.3 available)
+  io 1.0.4 (1.0.5 available)
+! ionicons 0.2.2 from path packages/ionicons (overridden)
+  isolate_channel 0.2.2+1 (0.6.1 available)
+  js 0.6.7 (0.7.2 available)
+  json_annotation 4.9.0 (4.12.0 available)
+  json_serializable 6.9.5 (6.14.1 available)
+  lean_builder 0.1.2 (1.2.2 available)
+  lints 6.0.0 (6.1.0 available)
+  local_auth 2.3.0 (3.0.2 available)
+  local_auth_android 1.0.49 (2.0.10 available)
+  local_auth_darwin 1.5.0 (2.0.4 available)
+  local_auth_platform_interface 1.0.10 (1.1.0 available)
+  local_auth_windows 1.0.11 (2.0.2 available)
+  logging 1.2.0 (1.3.0 available)
+  markdown 7.2.2 (7.3.1 available)
+  matcher 0.12.19 (0.12.20 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.0 (1.19.0 available)
+  mime 1.0.5 (2.0.0 available)
+  normalize 0.8.2+1 (0.10.0 available)
+  package_config 2.1.0 (3.0.0 available)
+  package_info_plus 8.3.0 (10.2.1 available)
+  package_info_plus_platform_interface 3.2.0 (4.1.0 available)
+  path_parsing 1.0.1 (1.1.0 available)
+  path_provider 2.1.4 (2.1.6 available)
+  path_provider_android 2.2.10 (2.3.1 available)
+  path_provider_foundation 2.4.0 (2.6.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  path_provider_platform_interface 2.1.2 (2.1.3 available)
+  petitparser 6.0.2 (7.0.2 available)
+  platform 3.1.5 (3.1.6 available)
+  pool 1.5.1 (1.5.2 available)
+  provider 6.1.5 (6.1.5+1 available)
+  pub_semver 2.2.0 (2.2.1 available)
+  pubspec_parse 1.5.0 (1.6.0 available)
+  qr 3.0.2 (4.0.0 available)
+  share_plus 11.0.0 (13.3.0 available)
+  share_plus_platform_interface 6.0.0 (7.2.0 available)
+  shared_preferences 2.3.2 (2.5.5 available)
+  shared_preferences_android 2.3.1 (2.4.28 available)
+  shared_preferences_foundation 2.5.2 (2.5.7 available)
+  shared_preferences_platform_interface 2.4.1 (2.4.2 available)
+  shared_preferences_web 2.4.2 (2.4.3 available)
+  shelf 1.4.1 (1.4.2 available)
+  shelf_web_socket 2.0.0 (3.0.0 available)
+  skeletonizer 2.1.0+1 (2.1.3 available)
+  socks5_proxy 1.0.6 (2.1.1 available)
+  source_gen 2.0.0 (4.3.0 available)
+  source_helper 1.3.6 (1.3.13 available)
+  source_span 1.10.1 (1.10.2 available)
+  stack_trace 1.12.1 (1.12.2 available)
+  stream_transform 2.1.0 (2.1.2 available)
+  test_api 0.7.11 (0.7.13 available)
+  timezone 0.10.1 (0.11.1 available)
+  timing 1.0.1 (1.0.2 available)
+  typed_data 1.3.2 (1.4.0 available)
+  url_launcher_android 6.3.9 (6.3.33 available)
+  url_launcher_ios 6.3.1 (6.4.2 available)
+  url_launcher_linux 3.2.0 (3.2.3 available)
+  url_launcher_macos 3.2.0 (3.2.6 available)
+  url_launcher_web 2.3.3 (2.4.3 available)
+  url_launcher_windows 3.1.2 (3.1.6 available)
+  uuid 4.5.1 (4.6.0 available)
+  vector_graphics 1.1.19 (1.2.3 available)
+  vector_graphics_codec 1.1.11+1 (1.1.13 available)
+  vector_graphics_compiler 1.1.17 (1.3.0 available)
+  vector_math 2.2.0 (2.4.2 available)
+  vm_service 15.0.0 (15.3.0 available)
+  watcher 1.1.2 (1.2.1 available)
+  win32 5.14.0 (6.4.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xdg_directories 1.0.4 (1.1.0 available)
+  xml 6.5.0 (7.0.1 available)
+  yaml 3.1.3 (3.1.4 available)
+Got dependencies!
+1 package is discontinued.
+148 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/connect_flow_test.dart
+Building Linux application...                                   
+✓ Built build/linux/x64/debug/bundle/selfprivacy
+00:00 +0: Connect to server over the transport (automated)
+[90m[🌎 Easy Localization] [DEBUG] Localization initialized[0m
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: {api: {version: 3.8.3, __typename: Api}, __typename: Query}, context: Context({ResponseExtensions: Instance of 'ResponseExtensions', HttpLinkResponseContext: Instance of 'HttpLinkResponseContext'}), exception: null, timestamp: 2026-08-29 03:02:48.592480)
+[DEV] Services fetched: 7 services: gitea(ServiceStatus.failed), jitsi-meet(ServiceStatus.active), simple-nixos-mailserver(ServiceStatus.inactive), matrix(ServiceStatus.active), nextcloud(ServiceStatus.active), monitoring(ServiceStatus.active), selfprivacy-api(ServiceStatus.active)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+[90m[🌎 Easy Localization] [DEBUG] Start[0m
+[90m[🌎 Easy Localization] [DEBUG] Init state[0m
+[90m[🌎 Easy Localization] [DEBUG] Build[0m
+[90m[🌎 Easy Localization] [DEBUG] Init Localization Delegate[0m
+[90m[🌎 Easy Localization] [DEBUG] Init provider[0m
+[90m[🌎 Easy Localization] [DEBUG] Load Localization Delegate[0m
+[90m[🌎 Easy Localization] [DEBUG] Load asset from assets/translations[0m
+[90m[🌎 Easy Localization] [DEBUG] Load asset from assets/translations[0m
+[shot] 01-launch -> /home/a/git/personal/selfprivacy/dev-dashboard/media/20260829T030225-d6c8.shots/01-launch.png
+[shot] 02-providers -> /home/a/git/personal/selfprivacy/dev-dashboard/media/20260829T030225-d6c8.shots/02-providers.png
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:02:59.082894)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:03:09.080179)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:03:19.080065)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:03:29.080032)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:03:39.087624)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:03:49.079493)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:03:59.081023)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:04:09.080246)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:04:19.080644)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+[shot] 03-connected -> /home/a/git/personal/selfprivacy/dev-dashboard/media/20260829T030225-d6c8.shots/03-connected.png
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: true
+  Actual: <false>
+App reached the UI but never loaded real backend data within 90s — the connection to the API over
+the transport is not actually working.
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/connect_flow_test.dart:88:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/connect_flow_test.dart line 88
+The test description was:
+  Connect to server over the transport (automated)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+01:37 +0 -1: Connect to server over the transport (automated) [E]
+  Test failed. See exception logs above.
+  The test description was: Connect to server over the transport (automated)
+  
+01:37 +0 -1: (tearDownAll)
+01:37 +0 -1: Some tests failed.
+
+Failing tests:
+  /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/connect_flow_test.dart: Connect to server over the transport (automated)

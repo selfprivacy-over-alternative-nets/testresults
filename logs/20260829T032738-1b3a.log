@@ -1,0 +1,607 @@
+# L3.addremove.desktop  net=https on=vm-local
+# flutter test integration_test/addremove_flow_test.dart -d linux --dart-define=HTTPS_DOMAIN=127.0.0.1.nip.io:8443 --dart-define=API_TOKEN=test-token-for-tor-development
+# cwd /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app
+# started 2026-08-29T01:27:40Z
+
+Resolving dependencies...
+... [290 lines trimmed] ...
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:29:32.139580)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:29:42.139487)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:29:52.139830)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:30:02.137985)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:30:12.138816)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:30:22.138263)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:30:32.138195)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:30:42.138830)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:30:52.145069)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:31:02.137971)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:31:12.140322)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:31:22.139490)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:31:32.138361)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:31:42.173067)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:31:52.138035)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:32:02.137998)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:32:12.138377)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:32:22.139512)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:32:32.138518)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:32:42.145581)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:32:52.137819)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:33:02.137578)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:33:12.138873)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:33:22.174985)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:33:32.139545)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:33:42.144610)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:33:52.139180)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:34:02.137903)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:34:12.137960)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:34:22.140066)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:34:32.137971)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:34:42.137601)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:34:52.137985)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:35:02.137964)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:35:12.139446)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:35:22.138378)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:35:32.137747)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:35:42.137716)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:35:52.137811)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:36:02.138927)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:36:12.138086)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:36:22.138688)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:36:32.138114)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:36:42.138111)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:36:52.138409)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:37:02.138136)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:37:12.137816)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:37:22.138076)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:37:32.138593)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:37:42.139615)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:37:52.138038)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: HandshakeException: Handshake error in client (OS Error: 
+	CERTIFICATE_VERIFY_FAILED: self signed certificate(handshake.cc:298)), originalStackTrace: #0      _SecureFilterImpl._handshake (dart:io-patch/secure_socket_patch.dart:101:46)
+#1      _SecureFilterImpl.handshake (dart:io-patch/secure_socket_patch.dart:146:25)
+#2      _RawSecureSocket._secureHandshake (dart:io/secure_socket.dart:995:54)
+#3      _RawSecureSocket._tryFilter (dart:io/secure_socket.dart:1127:19)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-08-29 03:38:02.139232)
+There was an error causing connection lost: WebSocketException: Connection to 'http://api.127.0.0.1.nip.io:8443/graphql#' was not upgraded to websocket, HTTP status code: 400
+Disconnected from websocket.
+[shot] 04-service-disabling -> /home/a/git/personal/selfprivacy/dev-dashboard/media/20260829T032738-1b3a.shots/04-service-disabling.png
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: true
+  Actual: <false>
+Status never transitioned away from active after tapping Disable — the backend did not apply the
+disable mutation within 600s.
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/addremove_flow_test.dart:138:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/addremove_flow_test.dart line 138
+The test description was:
+  Disable then re-enable a service (automated, MUTATES backend)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+10:10 +0 -1: Disable then re-enable a service (automated, MUTATES backend) [E]
+  Test failed. See exception logs above.
+  The test description was: Disable then re-enable a service (automated, MUTATES backend)
+  
+10:10 +0 -1: (tearDownAll)
+10:10 +0 -1: Some tests failed.
+
+Failing tests:
+  /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/addremove_flow_test.dart: Disable then re-enable a service (automated, MUTATES backend)

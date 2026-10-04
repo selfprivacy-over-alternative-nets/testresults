@@ -1,0 +1,55 @@
+# L3.connect.desktop  net=chutney on=vm-local
+# flutter test integration_test/connect_flow_test.dart -d linux --dart-define=ONION_DOMAIN=vdsu4dtqirnzm3tzdjqvuulsl7su3s5tk3x6burgjph2kvdsg4edh2yd.onion --dart-define=API_TOKEN=test-token-for-tor-development --dart-define=SOCKS_PORT=9009
+# cwd /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app
+# started 2026-09-20T21:48:54Z
+
+00:00 +0: loading /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/connect_flow_test.dart
+Building Linux application...                                   
+✓ Built build/linux/x64/debug/bundle/selfprivacy
+00:00 +0: Connect to server over the transport (automated)
+[90m[🌎 Easy Localization] [DEBUG] Localization initialized[0m
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: ServerException(originalException: ClientException with SocketException: Failed host lookup: 'api.theory7.weersurf.nl' (OS Error: Name or service not known, errno = -2), uri=https://api.theory7.weersurf.nl/graphql, originalStackTrace: #0      IOClient.send (package:http/src/io_client.dart:154:7)
+<asynchronous suspension>
+#1      HttpLink._executeRequest (package:gql_http_link/src/link.dart:141:24)
+<asynchronous suspension>
+#2      HttpLink.request (package:gql_http_link/src/link.dart:85:26)
+<asynchronous suspension>
+#3      _StreamController._add (dart:async/stream_controller.dart:661:3)
+<asynchronous suspension>
+#4      _StreamController._add (dart:async/stream_controller.dart:661:3)
+<asynchronous suspension>
+#5      Stream.timeout.<anonymous closure>.<anonymous closure> (dart:async/stream.dart:2078:18)
+<asynchronous suspension>
+, parsedResponse: null), graphqlErrors: []), timestamp: 2026-09-20 23:49:55.887984)
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: {api: {version: 3.8.3, __typename: Api}, __typename: Query}, context: Context({ResponseExtensions: Instance of 'ResponseExtensions', HttpLinkResponseContext: Instance of 'HttpLinkResponseContext'}), exception: null, timestamp: 2026-09-20 23:49:55.989763)
+[DEV] Services fetched: 7 services: gitea(ServiceStatus.failed), jitsi-meet(ServiceStatus.active), simple-nixos-mailserver(ServiceStatus.inactive), matrix(ServiceStatus.active), nextcloud(ServiceStatus.active), monitoring(ServiceStatus.active), selfprivacy-api(ServiceStatus.active)
+[90m[🌎 Easy Localization] [DEBUG] Start[0m
+[90m[🌎 Easy Localization] [DEBUG] Init state[0m
+[90m[🌎 Easy Localization] [DEBUG] Build[0m
+[90m[🌎 Easy Localization] [DEBUG] Init Localization Delegate[0m
+[90m[🌎 Easy Localization] [DEBUG] Init provider[0m
+[90m[🌎 Easy Localization] [DEBUG] Load Localization Delegate[0m
+[90m[🌎 Easy Localization] [DEBUG] Load asset from assets/translations[0m
+[90m[🌎 Easy Localization] [DEBUG] Load asset from assets/translations[0m
+[shot] 01-launch -> /home/a/git/personal/selfprivacy/dev-dashboard/media/20260920T234852-57f8.shots/01-launch.png
+[shot] 02-providers -> /home/a/git/personal/selfprivacy/dev-dashboard/media/20260920T234852-57f8.shots/02-providers.png
+[34m[🌎 Easy Localization] [WARNING] Localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Fallback localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Fallback localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Fallback localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Fallback localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Fallback localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Fallback localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Fallback localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Localization key [some_long_id] not found[0m
+[34m[🌎 Easy Localization] [WARNING] Fallback localization key [some_long_id] not found[0m
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: {api: {version: 3.8.3, __typename: Api}, __typename: Query}, context: Context({ResponseExtensions: Instance of 'ResponseExtensions', HttpLinkResponseContext: Instance of 'HttpLinkResponseContext'}), exception: null, timestamp: 2026-09-20 23:50:05.941979)
+[shot] 03-server-details -> /home/a/git/personal/selfprivacy/dev-dashboard/media/20260920T234852-57f8.shots/03-server-details.png
+00:13 +1: (tearDownAll)
+00:13 +1: All tests passed!

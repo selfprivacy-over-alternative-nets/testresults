@@ -1,0 +1,365 @@
+# L3.providers.desktop  net=tor on=vm-local
+# flutter test integration_test/providers_flow_test.dart -d linux --dart-define=ONION_DOMAIN=ukmcxx6hmhgzcvewjrcn4ncqw6dlyzhq3gzp4gbog62kkandmyldjfad.onion --dart-define=API_TOKEN=test-token-for-tor-development
+# cwd /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app
+# started 2026-08-28T21:34:18Z
+
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 85.0.0 (105.0.0 available)
+  analyzer 7.6.0 (14.1.0 available)
+  analyzer_plugin 0.13.1 (0.14.14 available)
+  animations 2.0.11 (3.0.0 available)
+  archive 3.6.1 (4.2.0 available)
+  async 2.13.0 (2.13.1 available)
+  auto_route 10.1.0+1 (11.1.0 available)
+  auto_route_generator 10.2.3 (10.6.0 available)
+! bloc 9.0.0 (overridden) (9.2.1 available)
+  build 2.5.4 (4.0.10 available)
+  build_config 1.1.1 (1.3.2 available)
+  build_daemon 4.0.2 (4.1.5 available)
+  build_resolvers 2.5.4 (3.0.4 available)
+  build_runner 2.5.4 (2.16.0 available)
+  build_runner_core 9.1.2 (9.3.2 available)
+  built_value 8.10.1 (8.12.7 available)
+  checked_yaml 2.0.3 (2.0.4 available)
+  cli_util 0.4.2 (0.6.0 available)
+  code_builder 4.10.1 (4.11.1 available)
+  connectivity_plus 6.1.4 (7.3.1 available)
+  connectivity_plus_platform_interface 2.0.1 (2.1.0 available)
+  convert 3.1.1 (3.1.2 available)
+  cross_file 0.3.4+2 (0.3.5+5 available)
+  crypto 3.0.5 (3.0.7 available)
+  cubit_form 2.0.5 (3.0.7 available)
+  cupertino_icons 1.0.8 (1.0.9 available)
+  custom_lint 0.7.5 (0.8.1 available)
+  custom_lint_builder 0.7.5 (0.8.1 available)
+  custom_lint_core 0.7.5 (0.8.2 available)
+  custom_lint_visitor 1.0.0+7.7.0 (1.0.0+9.0.0 available)
+  dart_style 3.1.0 (3.1.13 available)
+  dbus 0.7.10 (0.7.15 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.8.0+1 (5.11.0 available)
+  dio_web_adapter 2.0.0 (2.2.1 available)
+  dynamic_color 1.7.0 (2.1.0 available)
+  easy_localization 3.0.7+1 (3.0.8 available)
+  email_validator 2.1.17 (3.0.0 available)
+  equatable 2.0.7 (2.1.0 available)
+  ffi 2.1.4 (2.2.0 available)
+  fixnum 1.1.0 (1.1.1 available)
+  fl_chart 1.0.0 (1.2.0 available)
+! flutter_bloc 9.1.1 (overridden)
+  flutter_hooks 0.20.5 (0.21.3+1 available)
+  flutter_markdown 0.7.7+1 (discontinued replaced by flutter_markdown_plus)
+  flutter_plugin_android_lifecycle 2.0.21 (2.0.35 available)
+  flutter_secure_storage 9.2.4 (11.0.0 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.2 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.3 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  flutter_svg 2.2.0 (2.3.0 available)
+  get_it 8.0.3 (9.2.1 available)
+  gql 1.0.1-alpha+1717789143880 (1.0.1 available)
+  gql_code_builder 0.13.1 (0.15.2 available)
+  gql_code_builder_serializers 0.1.0 (0.1.0+1 available)
+  gql_dedupe_link 2.0.4-alpha+1715521079596 (4.0.0 available)
+  gql_error_link 1.0.0+1 (1.0.1 available)
+  gql_http_link 1.1.0 (1.2.0 available)
+  gql_link 1.0.1-alpha+1717789143896 (1.1.0 available)
+  gql_transform_link 1.0.0 (1.0.1 available)
+  gql_tristate_value 1.0.0 (1.1.0 available)
+  graphql 5.2.1 (5.2.4 available)
+  graphql_codegen 1.2.4 (3.0.2 available)
+  graphql_flutter 5.2.0 (5.3.0 available)
+  hive_ce 2.11.3 (2.19.3 available)
+  hive_ce_flutter 2.3.1 (2.3.4 available)
+  hive_ce_generator 1.9.2 (1.11.3 available)
+  hotreloader 4.3.0 (4.4.0 available)
+  http 1.4.0 (1.6.0 available)
+  http_multi_server 3.2.1 (3.2.2 available)
+  http_parser 4.0.2 (4.1.2 available)
+  image 4.2.0 (4.9.2 available)
+  intl 0.20.2 (0.20.3 available)
+  io 1.0.4 (1.0.5 available)
+! ionicons 0.2.2 from path packages/ionicons (overridden)
+  isolate_channel 0.2.2+1 (0.6.1 available)
+  js 0.6.7 (0.7.2 available)
+  json_annotation 4.9.0 (4.12.0 available)
+  json_serializable 6.9.5 (6.14.1 available)
+  lean_builder 0.1.2 (1.2.2 available)
+  lints 6.0.0 (6.1.0 available)
+  local_auth 2.3.0 (3.0.2 available)
+  local_auth_android 1.0.49 (2.0.10 available)
+  local_auth_darwin 1.5.0 (2.0.4 available)
+  local_auth_platform_interface 1.0.10 (1.1.0 available)
+  local_auth_windows 1.0.11 (2.0.2 available)
+  logging 1.2.0 (1.3.0 available)
+  markdown 7.2.2 (7.3.1 available)
+  matcher 0.12.19 (0.12.20 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.0 (1.19.0 available)
+  mime 1.0.5 (2.0.0 available)
+  normalize 0.8.2+1 (0.10.0 available)
+  package_config 2.1.0 (3.0.0 available)
+  package_info_plus 8.3.0 (10.2.1 available)
+  package_info_plus_platform_interface 3.2.0 (4.1.0 available)
+  path_parsing 1.0.1 (1.1.0 available)
+  path_provider 2.1.4 (2.1.6 available)
+  path_provider_android 2.2.10 (2.3.1 available)
+  path_provider_foundation 2.4.0 (2.6.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  path_provider_platform_interface 2.1.2 (2.1.3 available)
+  petitparser 6.0.2 (7.0.2 available)
+  platform 3.1.5 (3.1.6 available)
+  pool 1.5.1 (1.5.2 available)
+  provider 6.1.5 (6.1.5+1 available)
+  qr 3.0.2 (4.0.0 available)
+  share_plus 11.0.0 (13.3.0 available)
+  share_plus_platform_interface 6.0.0 (7.2.0 available)
+  shared_preferences 2.3.2 (2.5.5 available)
+  shared_preferences_android 2.3.1 (2.4.28 available)
+  shared_preferences_foundation 2.5.2 (2.5.7 available)
+  shared_preferences_platform_interface 2.4.1 (2.4.2 available)
+  shared_preferences_web 2.4.2 (2.4.3 available)
+  shelf 1.4.1 (1.4.2 available)
+  shelf_web_socket 2.0.0 (3.0.0 available)
+  skeletonizer 2.1.0+1 (2.1.3 available)
+  socks5_proxy 1.0.6 (2.1.1 available)
+  source_gen 2.0.0 (4.3.0 available)
+  source_helper 1.3.6 (1.3.13 available)
+  source_span 1.10.1 (1.10.2 available)
+  stream_transform 2.1.0 (2.1.1 available)
+  test_api 0.7.11 (0.7.13 available)
+  timezone 0.10.1 (0.11.1 available)
+  timing 1.0.1 (1.0.2 available)
+  typed_data 1.3.2 (1.4.0 available)
+  url_launcher_android 6.3.9 (6.3.33 available)
+  url_launcher_ios 6.3.1 (6.4.2 available)
+  url_launcher_linux 3.2.0 (3.2.3 available)
+  url_launcher_macos 3.2.0 (3.2.6 available)
+  url_launcher_web 2.3.3 (2.4.3 available)
+  url_launcher_windows 3.1.2 (3.1.6 available)
+  uuid 4.5.1 (4.6.0 available)
+  vector_graphics 1.1.19 (1.2.3 available)
+  vector_graphics_codec 1.1.11+1 (1.1.13 available)
+  vector_graphics_compiler 1.1.17 (1.3.0 available)
+  vector_math 2.2.0 (2.4.2 available)
+  vm_service 15.0.0 (15.3.0 available)
+  watcher 1.1.2 (1.2.1 available)
+  win32 5.14.0 (6.4.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xdg_directories 1.0.4 (1.1.0 available)
+  xml 6.5.0 (7.0.1 available)
+Got dependencies!
+1 package is discontinued.
+143 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/providers_flow_test.dart
+Building Linux application...                                   
+✓ Built build/linux/x64/debug/bundle/selfprivacy
+00:00 +0: Providers -> Services -> Providers (automated)
+[90m[🌎 Easy Localization] [DEBUG] Localization initialized[0m
+[90m[🌎 Easy Localization] [DEBUG] Start[0m
+[90m[🌎 Easy Localization] [DEBUG] Init state[0m
+[90m[🌎 Easy Localization] [DEBUG] Build[0m
+[90m[🌎 Easy Localization] [DEBUG] Init Localization Delegate[0m
+[90m[🌎 Easy Localization] [DEBUG] Init provider[0m
+[90m[🌎 Easy Localization] [DEBUG] Load Localization Delegate[0m
+[90m[🌎 Easy Localization] [DEBUG] Load asset from assets/translations[0m
+[90m[🌎 Easy Localization] [DEBUG] Load asset from assets/translations[0m
+[shot] 01-launch -> /home/a/git/personal/selfprivacy/dev-dashboard/media/20260828T233416-f29f.shots/01-launch.png
+[shot] 02-providers -> /home/a/git/personal/selfprivacy/dev-dashboard/media/20260828T233416-f29f.shots/02-providers.png
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following ServerException was thrown running a test:
+ServerException(originalException: Exception: Command handling failed. With error: hostUnreachable,
+originalStackTrace: #0      SocksSocket._handleCommandResponse
+(package:socks5_proxy/src/client/socks_client.dart:200:7)
+<asynchronous suspension>
+#1      SocksSocket.initialize (package:socks5_proxy/src/client/socks_client.dart:78:22)
+<asynchronous suspension>
+#2      SocksTCPClient.connect (package:socks5_proxy/src/client/socks_tcp_client.dart:64:20)
+<asynchronous suspension>
+#3      SocksTCPClient.assignToHttpClientWithSecureOptions.<anonymous closure>
+(package:socks5_proxy/src/client/socks_tcp_client.dart:46:40)
+<asynchronous suspension>
+#4      _ConnectionTarget.connect.<anonymous closure> (dart:_http/http_impl.dart:2703:7)
+<asynchronous suspension>
+#5      _HttpClient._openUrl.<anonymous closure> (dart:_http/http_impl.dart:3029:7)
+<asynchronous suspension>
+#6      IOClient.send (package:http/src/io_client.dart:117:24)
+<asynchronous suspension>
+#7      HttpLink._executeRequest (package:gql_http_link/src/link.dart:141:24)
+<asynchronous suspension>
+#8      HttpLink.request (package:gql_http_link/src/link.dart:85:26)
+<asynchronous suspension>
+#9      _StreamIterator._onData (dart:async/stream_impl.dart:1108:3)
+<asynchronous suspension>
+, parsedResponse: null)
+
+When the exception was thrown, this was the stack:
+#0      HttpLink._executeRequest (package:gql_http_link/src/link.dart:144:7)
+<asynchronous suspension>
+#1      HttpLink.request (package:gql_http_link/src/link.dart:85:26)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from dart:async)
+
+The test description was:
+  Providers -> Services -> Providers (automated)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:32 +0 -1: Providers -> Services -> Providers (automated) [E]
+  Test failed. See exception logs above.
+  The test description was: Providers -> Services -> Providers (automated)
+  
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: UnknownException(TimeoutException after 0:00:30.000000: No stream event, stack:
+dart:async/future_impl.dart 21:26                                                       _interceptError
+dart:async/future_impl.dart 52:23                                                       _interceptUserError
+dart:async/stream_controller.dart 624:39                                                _StreamController.addError
+dart:async/stream.dart 2055:20                                                          Stream.timeout.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 114:48                            StackZoneSpecification._registerCallback.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone.dart 649:23                                                             _CustomZone.bindCallback.<fn>
+dart:async-patch/timer_patch.dart 18:15                                                 Timer._createTimer.<fn>
+dart:isolate-patch/timer_impl.dart 423:19                                               _Timer._runTimers
+dart:isolate-patch/timer_impl.dart 454:5                                                _Timer._handleMessage
+dart:isolate-patch/isolate_patch.dart 192:12                                            _RawReceivePort._handleMessage
+===== asynchronous gap ===========================
+dart:async/zone.dart 747:19                                                             _CustomZone.registerCallback
+dart:async/zone.dart 648:22                                                             _CustomZone.bindCallback
+dart:async/zone_root.dart 144:21                                                        _rootCreateTimer
+dart:async/zone.dart 786:19                                                             _CustomZone.createTimer
+dart:async/stream.dart 2074:26                                                          Stream.timeout.<fn>
+dart:async/stream_controller.dart 838:24                                                _runGuarded
+dart:async/stream_controller.dart 716:7                                                 _StreamController._subscribe.<fn>
+dart:async/stream_impl.dart 457:13                                                      _BufferingStreamSubscription._guardCallback
+dart:async/stream_controller.dart 715:18                                                _StreamController._subscribe
+dart:async/stream_controller.dart 854:20                                                _ControllerStream._createSubscription
+dart:async/stream_impl.dart 516:42                                                      _StreamImpl.listen
+dart:async/stream.dart 1649:47                                                          Stream.first
+package:graphql/src/core/query_manager.dart 272:39                                      QueryManager._resolveQueryOnNetwork
+package:graphql/src/core/query_manager.dart 245:17                                      QueryManager.fetchQueryAsMultiSourceResult
+package:graphql/src/core/query_manager.dart 173:21                                      QueryManager.query
+package:graphql/src/graphql_client.dart 179:31                                          GraphQLClient.query
+package:selfprivacy/logic/api_maps/graphql_maps/schema/server_api.graphql.dart 3429:18  ClientExtension$Query$GetApiVersion.query$GetApiVersion
+package:selfprivacy/logic/api_maps/graphql_maps/server_api/server_api.dart 78:31        ServerApi.getApiVersion
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/logic/api_maps/graphql_maps/server_api/server_api.dart 77:36        ServerApi.getApiVersion
+package:selfprivacy/logic/get_it/api_connection_repository.dart 349:42                  ApiConnectionRepository.init
+package:selfprivacy/config/get_it_config.dart 27:34                                     getItSetup
+package:selfprivacy/main.dart 175:11                                                    main
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/main.dart 171:5                                                     main
+integration_test/providers_flow_test.dart 87:11                                         main.<fn>
+package:flutter_test/src/widget_tester.dart 192:29                                      testWidgets.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:flutter_test/src/widget_tester.dart 189:25                                      testWidgets.<fn>.<fn>
+package:flutter_test/src/binding.dart 1952:19                                           TestWidgetsFlutterBinding._runTestBody
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:flutter_test/src/binding.dart 1941:5                                            TestWidgetsFlutterBinding._runTestBody
+dart:async/zone_root.dart 78:13                                                         _rootRunBinary
+dart:async/zone.dart 740:19                                                             _CustomZone.runBinary
+package:flutter_test/src/binding.dart 1926:10                                           TestWidgetsFlutterBinding._runTest
+package:flutter_test/src/binding.dart 3059:12                                           LiveTestWidgetsFlutterBinding.runTest
+package:integration_test/integration_test.dart 237:17                                   IntegrationTestWidgetsFlutterBinding.runTest
+package:flutter_test/src/widget_tester.dart 184:24                                      testWidgets.<fn>
+package:test_api/src/backend/declarer.dart 253:25                                       Declarer.test.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:test_api/src/backend/declarer.dart 252:15                                       Declarer.test.<fn>.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/declarer.dart 250:17                                       Declarer.test.<fn>
+package:test_api/src/backend/invoker.dart 318:17                                        Invoker._waitForOutstandingCallbacks.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/invoker.dart 314:5                                         Invoker._waitForOutstandingCallbacks
+package:test_api/src/backend/invoker.dart 457:21                                        Invoker._onRun.<fn>.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:test_api/src/backend/invoker.dart 455:15                                        Invoker._onRun.<fn>.<fn>.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/invoker.dart 445:11                                        Invoker._onRun.<fn>.<fn>
+package:test_api/src/backend/invoker.dart 500:15                                        Invoker._guardIfGuarded
+package:test_api/src/backend/invoker.dart 444:9                                         Invoker._onRun.<fn>
+package:stack_trace/src/chain.dart 97:24                                                Chain.capture.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:stack_trace/src/chain.dart 95:12                                                Chain.capture
+package:test_api/src/backend/invoker.dart 442:11                                        Invoker._onRun
+package:test_api/src/backend/live_test_controller.dart 161:11                           LiveTestController.run
+package:test_api/src/backend/remote_listener.dart 323:16                                RemoteListener._runLiveTest.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/remote_listener.dart 322:5                                 RemoteListener._runLiveTest
+package:test_api/src/backend/remote_listener.dart 263:7                                 RemoteListener._serializeTest.<fn>
+dart:async/zone_root.dart 48:47                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/zone_root.dart 56:13                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/stream_controller.dart 898:13                                                _StreamSinkWrapper.add
+package:stream_channel/src/guarantee_channel.dart 125:12                                _GuaranteeSink.add
+package:stream_channel/src/multi_channel.dart 159:31                                    new _MultiChannel.<fn>
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:_internal/async_cast.dart 95:11                                                    CastStreamSubscription._onData
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/stream_controller.dart 898:13                                                _StreamSinkWrapper.add
+package:stream_channel/src/guarantee_channel.dart 125:12                                _GuaranteeSink.add
+/tmp/flutter_tools.NNMJTX/flutter_test_listener.TNFUWB/listener.dart 56:22              main.<fn>
+dart:async/zone.dart 967:54                                                             _RootZone.runBinary
+dart:async/zone.dart 923:33                                                             _RootZone.bindBinaryCallback.<fn>
+dart:developer-patch/developer.dart 113:23                                              _runExtension
+
+), graphqlErrors: []), timestamp: 2026-08-28 23:35:14.044399)
+  'package:flutter_test/src/binding.dart': Failed assertion: line 3081 pos 12: '_pendingFrame == null': is not true.
+  dart:core                                                                   _AssertionError._throwNew
+  package:flutter_test/src/binding.dart 3081:12                               LiveTestWidgetsFlutterBinding.postTest
+  ===== asynchronous gap ===========================
+  package:stream_channel                                                      _GuaranteeSink.add
+  /tmp/flutter_tools.NNMJTX/flutter_test_listener.TNFUWB/listener.dart 56:22  main.<fn>
+  
+00:32 +0 -1: (tearDownAll)
+00:32 +0 -1: Some tests failed.
+
+Failing tests:
+  /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/providers_flow_test.dart: Providers -> Services -> Providers (automated)

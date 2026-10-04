@@ -1,0 +1,5 @@
+# Videos are large, local-only artifacts. Everything else (results, logs, screenshots) is committed.
+*.mp4
+*.webm
+*.mkv
+*.mov

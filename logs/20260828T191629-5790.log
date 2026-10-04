@@ -1,0 +1,6 @@
+# L2.backend  net=https on=test-vm
+# nix build .#checks.x86_64-linux.https-integration --no-link -L
+# cwd /home/a/git/personal/selfprivacy/selfprivacy-tor-tests
+# started 2026-08-28T17:16:29Z
+
+warning: Git tree '/home/a/git/personal/selfprivacy/selfprivacy-tor-tests' is dirty

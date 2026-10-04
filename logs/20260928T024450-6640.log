@@ -1,0 +1,13 @@
+# install.lan-setup-0  net=- on=lan-setup-0
+# tools/e2e_install_native_ethernet.sh
+# cwd /home/a/git/personal/selfprivacy/dev-dashboard
+# started 2026-09-28T00:44:50Z
+
+
+[1m== 0. preflight — target reachable over LAN (network mode)? ==[0m
+target not at root@192.168.1.50 — scanning the LAN for the box by MAC d8:cb:8a:7c:0a:f4 ...
+   scanning for MAC d8:cb:8a:7c:0a:f4 on: 172.17.0.0/24 192.168.1.0/24 192.168.100.0/24
+target not reachable at root@192.168.1.50 and not found on the LAN by MAC d8:cb:8a:7c:0a:f4.
+  - boot it in network mode (installer or installed NixOS, sshd up, on the LAN), or
+  - pass the right IP:   IP=<addr> tools/e2e_install_native_ethernet.sh    (or  ./dash run <install-id> --ip <addr>), or
+  - check MAC=d8:cb:8a:7c:0a:f4 matches the target's NIC.

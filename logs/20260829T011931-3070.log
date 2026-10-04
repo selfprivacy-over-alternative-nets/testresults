@@ -1,0 +1,607 @@
+# L3.providers.desktop  net=tor on=vm-local
+# flutter test integration_test/providers_flow_test.dart -d linux --dart-define=ONION_DOMAIN=ukmcxx6hmhgzcvewjrcn4ncqw6dlyzhq3gzp4gbog62kkandmyldjfad.onion --dart-define=API_TOKEN=test-token-for-tor-development
+# cwd /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app
+# started 2026-08-28T23:19:33Z
+
+Resolving dependencies...
+... [460 lines trimmed] ...
+#3      SocksTCPClient.assignToHttpClientWithSecureOptions.<anonymous closure>
+(package:socks5_proxy/src/client/socks_tcp_client.dart:46:40)
+<asynchronous suspension>
+#4      _ConnectionTarget.connect.<anonymous closure> (dart:_http/http_impl.dart:2703:7)
+<asynchronous suspension>
+#5      _HttpClient._openUrl.<anonymous closure> (dart:_http/http_impl.dart:3029:7)
+<asynchronous suspension>
+#6      IOClient.send (package:http/src/io_client.dart:117:24)
+<asynchronous suspension>
+#7      HttpLink._executeRequest (package:gql_http_link/src/link.dart:141:24)
+<asynchronous suspension>
+#8      HttpLink.request (package:gql_http_link/src/link.dart:85:26)
+<asynchronous suspension>
+#9      _StreamIterator._onData (dart:async/stream_impl.dart:1108:3)
+<asynchronous suspension>
+, parsedResponse: null)
+
+When the exception was thrown, this was the stack:
+#0      HttpLink._executeRequest (package:gql_http_link/src/link.dart:144:7)
+<asynchronous suspension>
+#1      HttpLink.request (package:gql_http_link/src/link.dart:85:26)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from dart:async)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+01:36 +0 -1: Providers -> Services -> Providers (automated) [E]
+  Test failed. See exception logs above.
+  The test description was: Providers -> Services -> Providers (automated)
+  
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: UnknownException(TimeoutException after 0:00:30.000000: No stream event, stack:
+dart:async/future_impl.dart 21:26                                                       _interceptError
+dart:async/future_impl.dart 52:23                                                       _interceptUserError
+dart:async/stream_controller.dart 624:39                                                _StreamController.addError
+dart:async/stream.dart 2055:20                                                          Stream.timeout.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 114:48                            StackZoneSpecification._registerCallback.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone.dart 649:23                                                             _CustomZone.bindCallback.<fn>
+dart:async-patch/timer_patch.dart 18:15                                                 Timer._createTimer.<fn>
+dart:isolate-patch/timer_impl.dart 423:19                                               _Timer._runTimers
+dart:isolate-patch/timer_impl.dart 454:5                                                _Timer._handleMessage
+dart:isolate-patch/isolate_patch.dart 192:12                                            _RawReceivePort._handleMessage
+===== asynchronous gap ===========================
+dart:async/zone.dart 747:19                                                             _CustomZone.registerCallback
+dart:async/zone.dart 648:22                                                             _CustomZone.bindCallback
+dart:async/zone_root.dart 144:21                                                        _rootCreateTimer
+dart:async/zone.dart 786:19                                                             _CustomZone.createTimer
+dart:async/stream.dart 2074:26                                                          Stream.timeout.<fn>
+dart:async/stream_controller.dart 838:24                                                _runGuarded
+dart:async/stream_controller.dart 716:7                                                 _StreamController._subscribe.<fn>
+dart:async/stream_impl.dart 457:13                                                      _BufferingStreamSubscription._guardCallback
+dart:async/stream_controller.dart 715:18                                                _StreamController._subscribe
+dart:async/stream_controller.dart 854:20                                                _ControllerStream._createSubscription
+dart:async/stream_impl.dart 516:42                                                      _StreamImpl.listen
+dart:async/stream.dart 1649:47                                                          Stream.first
+package:graphql/src/core/query_manager.dart 272:39                                      QueryManager._resolveQueryOnNetwork
+package:graphql/src/core/query_manager.dart 245:17                                      QueryManager.fetchQueryAsMultiSourceResult
+package:graphql/src/core/query_manager.dart 173:21                                      QueryManager.query
+package:graphql/src/graphql_client.dart 179:31                                          GraphQLClient.query
+package:selfprivacy/logic/api_maps/graphql_maps/schema/server_api.graphql.dart 3429:18  ClientExtension$Query$GetApiVersion.query$GetApiVersion
+package:selfprivacy/logic/api_maps/graphql_maps/server_api/server_api.dart 78:31        ServerApi.getApiVersion
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/logic/api_maps/graphql_maps/server_api/server_api.dart 77:36        ServerApi.getApiVersion
+package:selfprivacy/logic/get_it/api_connection_repository.dart 449:42                  ApiConnectionRepository.reload
+package:stack_trace/src/stack_zone_specification.dart 127:36                            StackZoneSpecification._registerUnaryCallback.<fn>.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 127:24                            StackZoneSpecification._registerUnaryCallback.<fn>
+dart:async/zone_root.dart 48:47                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/zone.dart 671:26                                                             _CustomZone.bindUnaryCallbackGuarded.<fn>
+package:stack_trace/src/stack_zone_specification.dart 127:36                            StackZoneSpecification._registerUnaryCallback.<fn>.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 127:24                            StackZoneSpecification._registerUnaryCallback.<fn>
+dart:async/zone_root.dart 56:13                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 654:26                                                             _CustomZone.bindUnaryCallback.<fn>
+dart:isolate-patch/timer_impl.dart 423:19                                               _Timer._runTimers
+dart:isolate-patch/timer_impl.dart 454:5                                                _Timer._handleMessage
+dart:isolate-patch/isolate_patch.dart 192:12                                            _RawReceivePort._handleMessage
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+dart:async/zone.dart 670:22                                                             _CustomZone.bindUnaryCallbackGuarded
+dart:async/timer.dart 94:38                                                             new Timer.periodic
+package:selfprivacy/logic/get_it/api_connection_repository.dart 359:24                  ApiConnectionRepository.init
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/logic/get_it/api_connection_repository.dart 349:32                  ApiConnectionRepository.init
+package:selfprivacy/config/get_it_config.dart 27:34                                     getItSetup
+package:selfprivacy/main.dart 175:11                                                    main
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/main.dart 171:5                                                     main
+integration_test/providers_flow_test.dart 94:11                                         main.<fn>
+package:flutter_test/src/widget_tester.dart 192:29                                      testWidgets.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:flutter_test/src/widget_tester.dart 189:25                                      testWidgets.<fn>.<fn>
+package:flutter_test/src/binding.dart 1952:19                                           TestWidgetsFlutterBinding._runTestBody
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:flutter_test/src/binding.dart 1941:5                                            TestWidgetsFlutterBinding._runTestBody
+dart:async/zone_root.dart 78:13                                                         _rootRunBinary
+dart:async/zone.dart 740:19                                                             _CustomZone.runBinary
+package:flutter_test/src/binding.dart 1926:10                                           TestWidgetsFlutterBinding._runTest
+package:flutter_test/src/binding.dart 3059:12                                           LiveTestWidgetsFlutterBinding.runTest
+package:integration_test/integration_test.dart 237:17                                   IntegrationTestWidgetsFlutterBinding.runTest
+package:flutter_test/src/widget_tester.dart 184:24                                      testWidgets.<fn>
+package:test_api/src/backend/declarer.dart 253:25                                       Declarer.test.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:test_api/src/backend/declarer.dart 252:15                                       Declarer.test.<fn>.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/declarer.dart 250:17                                       Declarer.test.<fn>
+package:test_api/src/backend/invoker.dart 318:17                                        Invoker._waitForOutstandingCallbacks.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/invoker.dart 314:5                                         Invoker._waitForOutstandingCallbacks
+package:test_api/src/backend/invoker.dart 457:21                                        Invoker._onRun.<fn>.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:test_api/src/backend/invoker.dart 455:15                                        Invoker._onRun.<fn>.<fn>.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/invoker.dart 445:11                                        Invoker._onRun.<fn>.<fn>
+package:test_api/src/backend/invoker.dart 500:15                                        Invoker._guardIfGuarded
+package:test_api/src/backend/invoker.dart 444:9                                         Invoker._onRun.<fn>
+package:stack_trace/src/chain.dart 97:24                                                Chain.capture.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:stack_trace/src/chain.dart 95:12                                                Chain.capture
+package:test_api/src/backend/invoker.dart 442:11                                        Invoker._onRun
+package:test_api/src/backend/live_test_controller.dart 161:11                           LiveTestController.run
+package:test_api/src/backend/remote_listener.dart 323:16                                RemoteListener._runLiveTest.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/remote_listener.dart 322:5                                 RemoteListener._runLiveTest
+package:test_api/src/backend/remote_listener.dart 263:7                                 RemoteListener._serializeTest.<fn>
+dart:async/zone_root.dart 48:47                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/zone_root.dart 56:13                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/stream_controller.dart 898:13                                                _StreamSinkWrapper.add
+package:stream_channel/src/guarantee_channel.dart 125:12                                _GuaranteeSink.add
+package:stream_channel/src/multi_channel.dart 159:31                                    new _MultiChannel.<fn>
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:_internal/async_cast.dart 95:11                                                    CastStreamSubscription._onData
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/stream_controller.dart 898:13                                                _StreamSinkWrapper.add
+package:stream_channel/src/guarantee_channel.dart 125:12                                _GuaranteeSink.add
+/tmp/flutter_tools.KDGDLG/flutter_test_listener.DEQSUQ/listener.dart 56:22              main.<fn>
+dart:async/zone.dart 967:54                                                             _RootZone.runBinary
+dart:async/zone.dart 923:33                                                             _RootZone.bindBinaryCallback.<fn>
+dart:developer-patch/developer.dart 113:23                                              _runExtension
+
+), graphqlErrors: []), timestamp: 2026-08-29 01:21:29.878844)
+[DIAG] _OnionRetryLink attempt 3/3 failed: ServerException(originalException: Exception: Command handling failed. With error: hostUnreachable, originalStackTrace: #0      SocksSocket._handleCommandResponse (package:socks5_proxy/src/client/socks_client.dart:200:7)
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following ServerException was thrown running a test (but after the test had completed):
+ServerException(originalException: Exception: Command handling failed. With error: hostUnreachable,
+originalStackTrace: #0      SocksSocket._handleCommandResponse
+(package:socks5_proxy/src/client/socks_client.dart:200:7)
+<asynchronous suspension>
+#1      SocksSocket.initialize (package:socks5_proxy/src/client/socks_client.dart:78:22)
+<asynchronous suspension>
+#2      SocksTCPClient.connect (package:socks5_proxy/src/client/socks_tcp_client.dart:64:20)
+<asynchronous suspension>
+#3      SocksTCPClient.assignToHttpClientWithSecureOptions.<anonymous closure>
+(package:socks5_proxy/src/client/socks_tcp_client.dart:46:40)
+<asynchronous suspension>
+#4      _ConnectionTarget.connect.<anonymous closure> (dart:_http/http_impl.dart:2703:7)
+<asynchronous suspension>
+#5      _HttpClient._openUrl.<anonymous closure> (dart:_http/http_impl.dart:3029:7)
+<asynchronous suspension>
+#6      IOClient.send (package:http/src/io_client.dart:117:24)
+<asynchronous suspension>
+#7      HttpLink._executeRequest (package:gql_http_link/src/link.dart:141:24)
+<asynchronous suspension>
+#8      HttpLink.request (package:gql_http_link/src/link.dart:85:26)
+<asynchronous suspension>
+#9      _StreamIterator._onData (dart:async/stream_impl.dart:1108:3)
+<asynchronous suspension>
+, parsedResponse: null)
+
+When the exception was thrown, this was the stack:
+#0      HttpLink._executeRequest (package:gql_http_link/src/link.dart:144:7)
+<asynchronous suspension>
+#1      HttpLink.request (package:gql_http_link/src/link.dart:85:26)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from dart:async)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+  Test failed. See exception logs above.
+  The test description was: Providers -> Services -> Providers (automated)
+  
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: UnknownException(TimeoutException after 0:00:30.000000: No stream event, stack:
+dart:async/future_impl.dart 21:26                                                       _interceptError
+dart:async/future_impl.dart 52:23                                                       _interceptUserError
+dart:async/stream_controller.dart 624:39                                                _StreamController.addError
+dart:async/stream.dart 2055:20                                                          Stream.timeout.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 114:48                            StackZoneSpecification._registerCallback.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone.dart 649:23                                                             _CustomZone.bindCallback.<fn>
+dart:async-patch/timer_patch.dart 18:15                                                 Timer._createTimer.<fn>
+dart:isolate-patch/timer_impl.dart 423:19                                               _Timer._runTimers
+dart:isolate-patch/timer_impl.dart 454:5                                                _Timer._handleMessage
+dart:isolate-patch/isolate_patch.dart 192:12                                            _RawReceivePort._handleMessage
+===== asynchronous gap ===========================
+dart:async/zone.dart 747:19                                                             _CustomZone.registerCallback
+dart:async/zone.dart 648:22                                                             _CustomZone.bindCallback
+dart:async/zone_root.dart 144:21                                                        _rootCreateTimer
+dart:async/zone.dart 786:19                                                             _CustomZone.createTimer
+dart:async/stream.dart 2074:26                                                          Stream.timeout.<fn>
+dart:async/stream_controller.dart 838:24                                                _runGuarded
+dart:async/stream_controller.dart 716:7                                                 _StreamController._subscribe.<fn>
+dart:async/stream_impl.dart 457:13                                                      _BufferingStreamSubscription._guardCallback
+dart:async/stream_controller.dart 715:18                                                _StreamController._subscribe
+dart:async/stream_controller.dart 854:20                                                _ControllerStream._createSubscription
+dart:async/stream_impl.dart 516:42                                                      _StreamImpl.listen
+dart:async/stream.dart 1649:47                                                          Stream.first
+package:graphql/src/core/query_manager.dart 272:39                                      QueryManager._resolveQueryOnNetwork
+package:graphql/src/core/query_manager.dart 245:17                                      QueryManager.fetchQueryAsMultiSourceResult
+package:graphql/src/core/query_manager.dart 173:21                                      QueryManager.query
+package:graphql/src/graphql_client.dart 179:31                                          GraphQLClient.query
+package:selfprivacy/logic/api_maps/graphql_maps/schema/server_api.graphql.dart 3429:18  ClientExtension$Query$GetApiVersion.query$GetApiVersion
+package:selfprivacy/logic/api_maps/graphql_maps/server_api/server_api.dart 78:31        ServerApi.getApiVersion
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/logic/api_maps/graphql_maps/server_api/server_api.dart 77:36        ServerApi.getApiVersion
+package:selfprivacy/logic/get_it/api_connection_repository.dart 449:42                  ApiConnectionRepository.reload
+package:stack_trace/src/stack_zone_specification.dart 127:36                            StackZoneSpecification._registerUnaryCallback.<fn>.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 127:24                            StackZoneSpecification._registerUnaryCallback.<fn>
+dart:async/zone_root.dart 48:47                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/zone.dart 671:26                                                             _CustomZone.bindUnaryCallbackGuarded.<fn>
+package:stack_trace/src/stack_zone_specification.dart 127:36                            StackZoneSpecification._registerUnaryCallback.<fn>.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 127:24                            StackZoneSpecification._registerUnaryCallback.<fn>
+dart:async/zone_root.dart 56:13                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 654:26                                                             _CustomZone.bindUnaryCallback.<fn>
+dart:isolate-patch/timer_impl.dart 423:19                                               _Timer._runTimers
+dart:isolate-patch/timer_impl.dart 454:5                                                _Timer._handleMessage
+dart:isolate-patch/isolate_patch.dart 192:12                                            _RawReceivePort._handleMessage
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+dart:async/zone.dart 670:22                                                             _CustomZone.bindUnaryCallbackGuarded
+dart:async/timer.dart 94:38                                                             new Timer.periodic
+package:selfprivacy/logic/get_it/api_connection_repository.dart 359:24                  ApiConnectionRepository.init
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/logic/get_it/api_connection_repository.dart 349:32                  ApiConnectionRepository.init
+package:selfprivacy/config/get_it_config.dart 27:34                                     getItSetup
+package:selfprivacy/main.dart 175:11                                                    main
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/main.dart 171:5                                                     main
+integration_test/providers_flow_test.dart 94:11                                         main.<fn>
+package:flutter_test/src/widget_tester.dart 192:29                                      testWidgets.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:flutter_test/src/widget_tester.dart 189:25                                      testWidgets.<fn>.<fn>
+package:flutter_test/src/binding.dart 1952:19                                           TestWidgetsFlutterBinding._runTestBody
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:flutter_test/src/binding.dart 1941:5                                            TestWidgetsFlutterBinding._runTestBody
+dart:async/zone_root.dart 78:13                                                         _rootRunBinary
+dart:async/zone.dart 740:19                                                             _CustomZone.runBinary
+package:flutter_test/src/binding.dart 1926:10                                           TestWidgetsFlutterBinding._runTest
+package:flutter_test/src/binding.dart 3059:12                                           LiveTestWidgetsFlutterBinding.runTest
+package:integration_test/integration_test.dart 237:17                                   IntegrationTestWidgetsFlutterBinding.runTest
+package:flutter_test/src/widget_tester.dart 184:24                                      testWidgets.<fn>
+package:test_api/src/backend/declarer.dart 253:25                                       Declarer.test.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:test_api/src/backend/declarer.dart 252:15                                       Declarer.test.<fn>.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/declarer.dart 250:17                                       Declarer.test.<fn>
+package:test_api/src/backend/invoker.dart 318:17                                        Invoker._waitForOutstandingCallbacks.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/invoker.dart 314:5                                         Invoker._waitForOutstandingCallbacks
+package:test_api/src/backend/invoker.dart 457:21                                        Invoker._onRun.<fn>.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:test_api/src/backend/invoker.dart 455:15                                        Invoker._onRun.<fn>.<fn>.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/invoker.dart 445:11                                        Invoker._onRun.<fn>.<fn>
+package:test_api/src/backend/invoker.dart 500:15                                        Invoker._guardIfGuarded
+package:test_api/src/backend/invoker.dart 444:9                                         Invoker._onRun.<fn>
+package:stack_trace/src/chain.dart 97:24                                                Chain.capture.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:stack_trace/src/chain.dart 95:12                                                Chain.capture
+package:test_api/src/backend/invoker.dart 442:11                                        Invoker._onRun
+package:test_api/src/backend/live_test_controller.dart 161:11                           LiveTestController.run
+package:test_api/src/backend/remote_listener.dart 323:16                                RemoteListener._runLiveTest.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/remote_listener.dart 322:5                                 RemoteListener._runLiveTest
+package:test_api/src/backend/remote_listener.dart 263:7                                 RemoteListener._serializeTest.<fn>
+dart:async/zone_root.dart 48:47                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/zone_root.dart 56:13                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/stream_controller.dart 898:13                                                _StreamSinkWrapper.add
+package:stream_channel/src/guarantee_channel.dart 125:12                                _GuaranteeSink.add
+package:stream_channel/src/multi_channel.dart 159:31                                    new _MultiChannel.<fn>
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:_internal/async_cast.dart 95:11                                                    CastStreamSubscription._onData
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/stream_controller.dart 898:13                                                _StreamSinkWrapper.add
+package:stream_channel/src/guarantee_channel.dart 125:12                                _GuaranteeSink.add
+/tmp/flutter_tools.KDGDLG/flutter_test_listener.DEQSUQ/listener.dart 56:22              main.<fn>
+dart:async/zone.dart 967:54                                                             _RootZone.runBinary
+dart:async/zone.dart 923:33                                                             _RootZone.bindBinaryCallback.<fn>
+dart:developer-patch/developer.dart 113:23                                              _runExtension
+
+), graphqlErrors: []), timestamp: 2026-08-29 01:21:29.888170)
+[DIAG] _OnionRetryLink attempt 3/3 failed: ServerException(originalException: Exception: Command handling failed. With error: hostUnreachable, originalStackTrace: #0      SocksSocket._handleCommandResponse (package:socks5_proxy/src/client/socks_client.dart:200:7)
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following ServerException was thrown running a test (but after the test had completed):
+ServerException(originalException: Exception: Command handling failed. With error: hostUnreachable,
+originalStackTrace: #0      SocksSocket._handleCommandResponse
+(package:socks5_proxy/src/client/socks_client.dart:200:7)
+<asynchronous suspension>
+#1      SocksSocket.initialize (package:socks5_proxy/src/client/socks_client.dart:78:22)
+<asynchronous suspension>
+#2      SocksTCPClient.connect (package:socks5_proxy/src/client/socks_tcp_client.dart:64:20)
+<asynchronous suspension>
+#3      SocksTCPClient.assignToHttpClientWithSecureOptions.<anonymous closure>
+(package:socks5_proxy/src/client/socks_tcp_client.dart:46:40)
+<asynchronous suspension>
+#4      _ConnectionTarget.connect.<anonymous closure> (dart:_http/http_impl.dart:2703:7)
+<asynchronous suspension>
+#5      _HttpClient._openUrl.<anonymous closure> (dart:_http/http_impl.dart:3029:7)
+<asynchronous suspension>
+#6      IOClient.send (package:http/src/io_client.dart:117:24)
+<asynchronous suspension>
+#7      HttpLink._executeRequest (package:gql_http_link/src/link.dart:141:24)
+<asynchronous suspension>
+#8      HttpLink.request (package:gql_http_link/src/link.dart:85:26)
+<asynchronous suspension>
+#9      _StreamIterator._onData (dart:async/stream_impl.dart:1108:3)
+<asynchronous suspension>
+, parsedResponse: null)
+
+When the exception was thrown, this was the stack:
+#0      HttpLink._executeRequest (package:gql_http_link/src/link.dart:144:7)
+<asynchronous suspension>
+#1      HttpLink.request (package:gql_http_link/src/link.dart:85:26)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from dart:async)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+  Test failed. See exception logs above.
+  The test description was: Providers -> Services -> Providers (automated)
+  
+GraphQL Response: QueryResult(source: QueryResultSource.network, data: null, context: Context({}), exception: OperationException(linkException: UnknownException(TimeoutException after 0:00:30.000000: No stream event, stack:
+dart:async/future_impl.dart 21:26                                                       _interceptError
+dart:async/future_impl.dart 52:23                                                       _interceptUserError
+dart:async/stream_controller.dart 624:39                                                _StreamController.addError
+dart:async/stream.dart 2055:20                                                          Stream.timeout.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 114:48                            StackZoneSpecification._registerCallback.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone.dart 649:23                                                             _CustomZone.bindCallback.<fn>
+dart:async-patch/timer_patch.dart 18:15                                                 Timer._createTimer.<fn>
+dart:isolate-patch/timer_impl.dart 423:19                                               _Timer._runTimers
+dart:isolate-patch/timer_impl.dart 454:5                                                _Timer._handleMessage
+dart:isolate-patch/isolate_patch.dart 192:12                                            _RawReceivePort._handleMessage
+===== asynchronous gap ===========================
+dart:async/zone.dart 747:19                                                             _CustomZone.registerCallback
+dart:async/zone.dart 648:22                                                             _CustomZone.bindCallback
+dart:async/zone_root.dart 144:21                                                        _rootCreateTimer
+dart:async/zone.dart 786:19                                                             _CustomZone.createTimer
+dart:async/stream.dart 2074:26                                                          Stream.timeout.<fn>
+dart:async/stream_controller.dart 838:24                                                _runGuarded
+dart:async/stream_controller.dart 716:7                                                 _StreamController._subscribe.<fn>
+dart:async/stream_impl.dart 457:13                                                      _BufferingStreamSubscription._guardCallback
+dart:async/stream_controller.dart 715:18                                                _StreamController._subscribe
+dart:async/stream_controller.dart 854:20                                                _ControllerStream._createSubscription
+dart:async/stream_impl.dart 516:42                                                      _StreamImpl.listen
+dart:async/stream.dart 1649:47                                                          Stream.first
+package:graphql/src/core/query_manager.dart 272:39                                      QueryManager._resolveQueryOnNetwork
+package:graphql/src/core/query_manager.dart 245:17                                      QueryManager.fetchQueryAsMultiSourceResult
+package:graphql/src/core/query_manager.dart 173:21                                      QueryManager.query
+package:graphql/src/graphql_client.dart 179:31                                          GraphQLClient.query
+package:selfprivacy/logic/api_maps/graphql_maps/schema/server_api.graphql.dart 3429:18  ClientExtension$Query$GetApiVersion.query$GetApiVersion
+package:selfprivacy/logic/api_maps/graphql_maps/server_api/server_api.dart 78:31        ServerApi.getApiVersion
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/logic/api_maps/graphql_maps/server_api/server_api.dart 77:36        ServerApi.getApiVersion
+package:selfprivacy/logic/get_it/api_connection_repository.dart 449:42                  ApiConnectionRepository.reload
+package:stack_trace/src/stack_zone_specification.dart 127:36                            StackZoneSpecification._registerUnaryCallback.<fn>.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 127:24                            StackZoneSpecification._registerUnaryCallback.<fn>
+dart:async/zone_root.dart 48:47                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/zone.dart 671:26                                                             _CustomZone.bindUnaryCallbackGuarded.<fn>
+package:stack_trace/src/stack_zone_specification.dart 127:36                            StackZoneSpecification._registerUnaryCallback.<fn>.<fn>
+package:stack_trace/src/stack_zone_specification.dart 207:15                            StackZoneSpecification._run
+package:stack_trace/src/stack_zone_specification.dart 127:24                            StackZoneSpecification._registerUnaryCallback.<fn>
+dart:async/zone_root.dart 56:13                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 654:26                                                             _CustomZone.bindUnaryCallback.<fn>
+dart:isolate-patch/timer_impl.dart 423:19                                               _Timer._runTimers
+dart:isolate-patch/timer_impl.dart 454:5                                                _Timer._handleMessage
+dart:isolate-patch/isolate_patch.dart 192:12                                            _RawReceivePort._handleMessage
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+dart:async/zone.dart 670:22                                                             _CustomZone.bindUnaryCallbackGuarded
+dart:async/timer.dart 94:38                                                             new Timer.periodic
+package:selfprivacy/logic/get_it/api_connection_repository.dart 359:24                  ApiConnectionRepository.init
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/logic/get_it/api_connection_repository.dart 349:32                  ApiConnectionRepository.init
+package:selfprivacy/config/get_it_config.dart 27:34                                     getItSetup
+package:selfprivacy/main.dart 175:11                                                    main
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:selfprivacy/main.dart 171:5                                                     main
+integration_test/providers_flow_test.dart 94:11                                         main.<fn>
+package:flutter_test/src/widget_tester.dart 192:29                                      testWidgets.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:flutter_test/src/widget_tester.dart 189:25                                      testWidgets.<fn>.<fn>
+package:flutter_test/src/binding.dart 1952:19                                           TestWidgetsFlutterBinding._runTestBody
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:flutter_test/src/binding.dart 1941:5                                            TestWidgetsFlutterBinding._runTestBody
+dart:async/zone_root.dart 78:13                                                         _rootRunBinary
+dart:async/zone.dart 740:19                                                             _CustomZone.runBinary
+package:flutter_test/src/binding.dart 1926:10                                           TestWidgetsFlutterBinding._runTest
+package:flutter_test/src/binding.dart 3059:12                                           LiveTestWidgetsFlutterBinding.runTest
+package:integration_test/integration_test.dart 237:17                                   IntegrationTestWidgetsFlutterBinding.runTest
+package:flutter_test/src/widget_tester.dart 184:24                                      testWidgets.<fn>
+package:test_api/src/backend/declarer.dart 253:25                                       Declarer.test.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:test_api/src/backend/declarer.dart 252:15                                       Declarer.test.<fn>.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/declarer.dart 250:17                                       Declarer.test.<fn>
+package:test_api/src/backend/invoker.dart 318:17                                        Invoker._waitForOutstandingCallbacks.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/invoker.dart 314:5                                         Invoker._waitForOutstandingCallbacks
+package:test_api/src/backend/invoker.dart 457:21                                        Invoker._onRun.<fn>.<fn>.<fn>
+===== asynchronous gap ===========================
+dart:async/zone.dart 754:19                                                             _CustomZone.registerUnaryCallback
+package:test_api/src/backend/invoker.dart 455:15                                        Invoker._onRun.<fn>.<fn>.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/invoker.dart 445:11                                        Invoker._onRun.<fn>.<fn>
+package:test_api/src/backend/invoker.dart 500:15                                        Invoker._guardIfGuarded
+package:test_api/src/backend/invoker.dart 444:9                                         Invoker._onRun.<fn>
+package:stack_trace/src/chain.dart 97:24                                                Chain.capture.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:stack_trace/src/chain.dart 95:12                                                Chain.capture
+package:test_api/src/backend/invoker.dart 442:11                                        Invoker._onRun
+package:test_api/src/backend/live_test_controller.dart 161:11                           LiveTestController.run
+package:test_api/src/backend/remote_listener.dart 323:16                                RemoteListener._runLiveTest.<fn>
+dart:async/zone_root.dart 35:13                                                         _rootRun
+dart:async/zone.dart 726:19                                                             _CustomZone.run
+dart:async/zone_api.dart 166:6                                                          _runZoned
+dart:async/zone_api.dart 92:10                                                          runZoned
+package:test_api/src/backend/remote_listener.dart 322:5                                 RemoteListener._runLiveTest
+package:test_api/src/backend/remote_listener.dart 263:7                                 RemoteListener._serializeTest.<fn>
+dart:async/zone_root.dart 48:47                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/zone_root.dart 56:13                                                         _rootRunUnary
+dart:async/zone.dart 733:19                                                             _CustomZone.runUnary
+dart:async/zone.dart 633:7                                                              _CustomZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/stream_controller.dart 898:13                                                _StreamSinkWrapper.add
+package:stream_channel/src/guarantee_channel.dart 125:12                                _GuaranteeSink.add
+package:stream_channel/src/multi_channel.dart 159:31                                    new _MultiChannel.<fn>
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:_internal/async_cast.dart 95:11                                                    CastStreamSubscription._onData
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/zone.dart 891:10                                                             _RootZone.runUnaryGuarded
+dart:async/stream_impl.dart 381:11                                                      _BufferingStreamSubscription._sendData
+dart:async/stream_impl.dart 312:7                                                       _BufferingStreamSubscription._add
+dart:async/stream_controller.dart 798:19                                                _SyncStreamControllerDispatch._sendData
+dart:async/stream_controller.dart 663:7                                                 _StreamController._add
+dart:async/stream_controller.dart 618:5                                                 _StreamController.add
+dart:async/stream_controller.dart 898:13                                                _StreamSinkWrapper.add
+package:stream_channel/src/guarantee_channel.dart 125:12                                _GuaranteeSink.add
+/tmp/flutter_tools.KDGDLG/flutter_test_listener.DEQSUQ/listener.dart 56:22              main.<fn>
+dart:async/zone.dart 967:54                                                             _RootZone.runBinary
+dart:async/zone.dart 923:33                                                             _RootZone.bindBinaryCallback.<fn>
+dart:developer-patch/developer.dart 113:23                                              _runExtension
+
+), graphqlErrors: []), timestamp: 2026-08-29 01:21:29.895991)
+01:36 +0 -1: Some tests failed.
+
+Failing tests:
+  /home/a/git/personal/selfprivacy/Manager-Ubuntu-SelfPrivacy-Over-Tor/flutter-app/selfprivacy.org.app/integration_test/providers_flow_test.dart: Providers -> Services -> Providers (automated)
