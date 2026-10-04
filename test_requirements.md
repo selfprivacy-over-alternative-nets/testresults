@@ -83,3 +83,14 @@
 ## CI vs local
 65. Record, per run, whether it was executed Locally or on CI.
 66. In CI, the recorded repo/branch/commit is whatever CI checked out (the committed refs from the git server).
+
+## Dashboard / visualization (status model)
+67. The matrix is catalog-driven: it shows every test as the overview even with no results — each applicable network × setup × {Local,CI} cell defaults to ☐ todo.
+68. Cell statuses are todo / pass / fail / N/A (N/A for an unsupported network or a non-applicable setup).
+69. Hovering a ☐ todo cell shows the exact command to run that test (with a copy button).
+
+## Setup availability (preflight)
+70. At the start of a test, verify the specified setup is available, as far as it can be checked.
+71. USB setups: a USB device is present (and empty, if emptiness is required).
+72. Wifi setups: a wifi spec (SSID, plus credentials as needed) must be specified.
+73. Verify the specified wifi is in range / yields internet only when that is possible without disturbing the current wifi connection (e.g. a scan confirms the SSID is in range; internet-through-it is not checked if that would require connecting).
