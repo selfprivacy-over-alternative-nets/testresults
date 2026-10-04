@@ -99,3 +99,30 @@
 74. Hovering a test group (level) or a test shows a brief explanation of what it tests (sourced from the catalog `levels`/`desc`).
 75. Hovering a ⚪ N/A cell shows a brief reason it is not available: a roadmap transport that is not implemented yet (catalog `future_networks`), or not applicable because that test does not exercise that transport.
 76. The matrix shows a sub-header row under the setup columns indicating the Local/CI split (each cell holds two dots: local, then CI).
+
+## Integrity — a result must reflect the committed code (no silent green)
+77. A pass must mean the committed code of the recorded state actually ran; any divergence between what runs and the intended code must be detected — refuse or fail, never a silent pass.
+78. Pins recorded for a run, and the pin gate, are read from the flake.lock that actually governs that run's build: a self-contained test uses its OWN flake.lock, not the backend's.
+79. The pin gate checks every input the governing lock pins (e.g. selfprivacy-api AND manager), not only the api.
+80. A nix build that reused an existing output (nothing built; no VM ran) is flagged (from_cache), not shown as a fresh run.
+81. An output fetched from a binary cache (substituted — built elsewhere, not run here) is flagged.
+82. A self-contained test's nixpkgs matches the deployed backend's nixpkgs (test ↔ production parity).
+83. L3 drives the app with a pinned toolchain (the app flake's flutter) and resolves deps with the lockfile enforced; a toolchain/dep mismatch fails loud instead of silently regenerating the lockfile.
+84. The box-identity check measures the box's actual running system (/run/current-system vs a baseline recorded at install), not only the install-time stamp.
+85. A run forced past a gate (--allow-dirty) is recorded and shown as forced — never indistinguishable from a clean pass.
+86. Manually-reported (click-through/video) results are marked manual/self-attested, distinct from automated runs.
+87. A transient/flaky retry attempt is retained (marked flaky), not deleted, so intermittent failures are not hidden.
+88. A checkout behind its tracked upstream blocks the run (after refreshing the remote ref); bypass only with --allow-dirty (then recorded as forced).
+89. A live target address (e.g. the backend .onion) is read live from the backend, not from stale local state.
+
+## Integrity — to implement (Track 2)
+90. L3 real-data assertions run against a known-clean backend baseline: mutable state (userdata, enabled services, users, DB) is snapshot/restored (or reset) per flow so a result reflects the code, not leftover state; what the reset cannot cover is logged.
+91. The clean-state check also catches build-affecting inputs invisible to `git status`: gitignored files (e.g. users.nix, .env) and a non-hermetic nix config (sandbox disabled / --impure).
+92. The recorded state identity is the exact build closure (derivation path/hash), not only the three input pins.
+
+## Dashboard / visualization (run history & flakiness)
+93. One circle never represents multiple runs; each run is its own circle.
+94. A config's runs are shown chronologically: collapsed shows only the most recent; expanded shows the full sequence, newest on top → oldest on the bottom.
+95. Flakiness is represented by the green/red sequence of per-run circles, not by an aggregate marker or count.
+96. Each run circle links to that run's log/media.
+97. A run carrying trust qualifiers (forced/manual/cached/substituted/behind) is marked per-run (e.g. a ring), distinct from a clean run.
