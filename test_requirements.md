@@ -6,7 +6,7 @@
 3. Commands must fail fast, stating exactly which argument to set, when one is missing.
 4. The goal is that a random person on a random network/device can run the tests from the written commands alone.
 5. The test commands are run manually by the human, not by an AI that can resolve intermediate issues.
-6. Purely-derived paths and internal timeouts may keep defaults; user-facing knobs may not.
+6. An argument must be required only if silently defaulting it could make the run test the wrong thing or hit the wrong target unnoticed; values that are purely derived from a required argument (e.g. EXTRA from FLAKE) or are mere timeouts may keep defaults.
 
 ## Test matrix & scope
 7. Provide integration tests covering the whole UI / Flutter app.
