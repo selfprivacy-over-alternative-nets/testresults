@@ -126,3 +126,11 @@
 95. Flakiness is represented by the green/red sequence of per-run circles, not by an aggregate marker or count.
 96. Each run circle links to that run's log/media.
 97. A run carrying trust qualifiers (forced/manual/cached/substituted/behind) is marked per-run (e.g. a ring), distinct from a clean run.
+
+## Integrity — L3 backend targeting (Track 2, item 1a)
+98. L3 desktop flows run against the backend named by the test args (`--on <setup>`): `vm-local` → the local VirtualBox VM; `lan-setup-0a..0d` / `lan-setup-1` / `lan-setup-2` / `usb-0a..0c` → a deployed physical box reached over the LAN. The backend is never hardcoded to the VM.
+99. Running an L3 flow against a box requires `--ip`, `--key`, and `--token`; the box's API token is per-box and secret, so it is never defaulted (reproducibility reqs 1–6). Missing args fail fast, naming what to set.
+100. For a box the dialed address is read LIVE from the box (req 89), never from stale local state: the onion from `/var/lib/tor/hidden_service/hostname`, the https host as `api.<domain>` where `domain` comes from the box's `/etc/nixos/userdata.json`.
+101. `chutney` is a laptop-local private Tor network, valid for `vm-local` only; a box is reached over `tor` (real onion) or `https` (public domain, system-trust LE cert — no tunnel/mkcert CA). An unsupported network×setup combination is rejected fast.
+102. An L3 run records the real setup as its `method` so the result lands in the correct matrix column; for a box, the deployment provenance the box-identity gate computed (stamp, measured running-system, box repos+pins) is recorded on the run.
+103. The clean-state, pin, and behind-upstream gates apply to every gated run — a test (identified by its `level`) as well as an install — not only installs. The L3 inner recorder does not re-gate a run whose outer run_entry already gated it.
