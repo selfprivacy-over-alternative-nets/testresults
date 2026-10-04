@@ -153,3 +153,6 @@
 
 ## Harness UX — fail fast before I/O
 114. Args-only preconditions are rejected before any git fetch / lock read / SSH: a no-op entry (@todo/@manual) or an L3 run whose args can't work (no --on; a box setup missing --ip/--key/--token; chutney on a box; an android client not yet supported) fails in milliseconds, instead of paying per-entry base-building (notably `repos_behind_upstream(fetch=True)`'s `git fetch`). The authoritative box checks (reachability, live onion/domain, stamp identity) still run for valid args.
+
+## Reproducibility — retargeting the rig to new hardware
+115. Pointing the netboot + deploy rig at a different target device is a single scripted, explicit-args operation — not a hand-edit and not an AI task. `dev-dashboard/tools/retarget_device.sh` discovers the new target's NIC MAC and disks from the running netboot installer over SSH, then rewrites the two hardware-specific files (the `dnsmasq.conf` MAC→pinned-IP reservation and the `disko.nix` disk layout, by stable by-id), with backups, a confirm before wiping, and single- or dual-disk support.
