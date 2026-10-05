@@ -162,3 +162,7 @@
 
 ## Install UX — verify the right target device
 117. The harness helps you install to the RIGHT physical device, not just the right code. `dash find-target` discovers candidates — the netboot DHCP leases first (a device that booted into the installer), then a scan of every connected LAN incl. the direct-cable netboot subnet — shows each MAC+IP, and asks you to confirm the one matching the MAC shown on the target's own screen before printing the install command. The install itself stays MAC-locked (it finds/adopts the box only by the MAC you pass), so it can never silently talk to a different machine.
+
+## Install UX — adapt to the target hardware
+118. Installing to a DIFFERENT physical device adapts automatically: before writing anything, the install checks whether the deploy flake's disks (by stable id) exist on the target and, on a mismatch, retargets the disk layout (+ netboot MAC pin) from the target's real hardware — asking ONCE, up front, which disk to WIPE. A disko pinned to one machine's serials isn't portable; the install adapts instead of failing with a cryptic disko error.
+119. The fine install setups are runnable ids: `install.lan-setup-0a..0d` / `install.usb-0a..0c` resolve to the coarse installer while recording the fine setup as the method. A setup that leaves the target on wifi (…-0b/0c/0d) requires a wifi spec (`--env WIFI_SSID=…`), verified in range by a non-disruptive scan (reqs 72–73) before anything is written.
