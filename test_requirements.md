@@ -156,3 +156,6 @@
 
 ## Reproducibility — retargeting the rig to new hardware
 115. Pointing the netboot + deploy rig at a different target device is a single scripted, explicit-args operation — not a hand-edit and not an AI task. `dev-dashboard/tools/retarget_device.sh` discovers the new target's NIC MAC and disks from the running netboot installer over SSH, then rewrites the two hardware-specific files (the `dnsmasq.conf` MAC→pinned-IP reservation and the `disko.nix` disk layout, by stable by-id), with backups, a confirm before wiping, and single- or dual-disk support.
+
+## Integrity — install-method must match the claimed column
+116. The deployment stamp records the install method, and a test that runs against a box verifies it: a result only lands in an install-method column (usb vs lan/netboot vs vm) if the box was actually installed that way — matched by family, since the fine `a/b/c/d` variants share one install. Otherwise the run is refused (bypass `--allow-dirty`, recorded as a method mismatch), so e.g. a `usb-*` cell can't go green against a lan-installed box.
