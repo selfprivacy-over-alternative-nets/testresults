@@ -159,3 +159,6 @@
 
 ## Integrity — install-method must match the claimed column
 116. The deployment stamp records the install method, and a test that runs against a box verifies it: a result only lands in an install-method column (usb vs lan/netboot vs vm) if the box was actually installed that way — matched by family, since the fine `a/b/c/d` variants share one install. Otherwise the run is refused (bypass `--allow-dirty`, recorded as a method mismatch), so e.g. a `usb-*` cell can't go green against a lan-installed box.
+
+## Install UX — verify the right target device
+117. The harness helps you install to the RIGHT physical device, not just the right code. `dash find-target` discovers candidates — the netboot DHCP leases first (a device that booted into the installer), then a scan of every connected LAN incl. the direct-cable netboot subnet — shows each MAC+IP, and asks you to confirm the one matching the MAC shown on the target's own screen before printing the install command. The install itself stays MAC-locked (it finds/adopts the box only by the MAC you pass), so it can never silently talk to a different machine.
