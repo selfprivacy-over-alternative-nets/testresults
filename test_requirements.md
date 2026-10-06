@@ -93,7 +93,7 @@
 70. At the start of a test, verify the specified setup is available, as far as it can be checked.
 71. USB setups: a USB device is present (and empty, if emptiness is required).
 72. Wifi setups: a wifi spec (SSID, plus credentials as needed) must be specified.
-73. Verify the specified wifi is in range / yields internet only when that is possible without disturbing the current wifi connection (e.g. a scan confirms the SSID is in range; internet-through-it is not checked if that would require connecting).
+73. Verify the specified wifi is in range / yields internet only when that is possible without disturbing the current wifi connection (e.g. a scan confirms the SSID is in range; the PASSWORD can only be verified by associating, so it is tested only when a wifi radio is free — not the one in use — otherwise it is flagged as not-verified (orange warning); internet-through-it is not checked if that would require connecting).
 
 ## Dashboard / visualization (explanatory hovers)
 74. Hovering a test group (level) or a test shows a brief explanation of what it tests (sourced from the catalog `levels`/`desc`).
