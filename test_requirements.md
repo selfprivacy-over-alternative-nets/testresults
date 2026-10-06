@@ -228,3 +228,8 @@
    or not propagated yet; a re-check loop handles propagation delay. On success it prints the ready L3
    integration-test command. All CLI args explicit; `--domain`/`--key` required. Fully non-interactive
    installs (CI/pipes) are unchanged — the guided finish is only offered when a terminal is present.
+   **Placement preserves timing integrity:** under `dash` the install runs in a captured pipe, so `dash`
+   launches the guided finish on the real terminal only AFTER the install record is written — the human's
+   time inside it (incl. DNS-propagation waits) never counts toward the install's recorded `duration_s`,
+   so a clean install is never mis-marked `slow`. A standalone run of the installer (`stdout` is a tty)
+   offers it inline instead. The two paths are mutually exclusive (keyed on whether stdout is a terminal).
