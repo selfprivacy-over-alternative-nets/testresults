@@ -198,3 +198,6 @@
    excluded from the mirror (`rsync --exclude state`), so it is never pushed/uploaded. To version it
    safely too, lock the whole folder with ONE passphrase — `age -p` over a tar of `state/` → one
    encrypted `state.age` (symmetric = post-quantum-adequate) that can go in a private repo.
+
+## Install UX — fill in the flake automatically
+122. After `dash find-target` confirms a target, it resolves the last two blanks of the install command for you (via `tools/resolve_flake.sh`): the deploy FLAKE is auto-found (the sibling folder whose `flake.nix` declares `nixosConfigurations.box` — i.e. `selfprivacy-altnet-deployer`; a list to pick from, or a prompt, if there are zero or several), and the DOMAIN is suggested from that flake. It then prints the fully-filled command and offers to run it.
