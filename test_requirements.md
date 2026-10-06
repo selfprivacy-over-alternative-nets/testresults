@@ -201,3 +201,15 @@
 
 ## Install UX — fill in the flake automatically
 122. After `dash find-target` confirms a target, it resolves the last two blanks of the install command for you (via `tools/resolve_flake.sh`): the deploy FLAKE is auto-found (the sibling folder whose `flake.nix` declares `nixosConfigurations.box` — i.e. `selfprivacy-altnet-deployer`; a list to pick from, or a prompt, if there are zero or several), and the DOMAIN is suggested from that flake. It then asks which network setup to use (lan-setup-0a/0b/0c/0d — how the box gets online after install), prompting for the wifi SSID + password (entered hidden) only when the chosen setup needs wifi, and prints the fully-filled command (wifi password masked) and offers to run it.
+
+## Install UX — the flow ends with the next steps spelled out
+123. When an install finishes, the installer prints a **NEXT STEPS** block so the operator never has to
+   reconstruct them: (a) the exact **L3 integration-test command** that drives the app against this
+   backend (`./dash run L3.connect.desktop --net … --on <the setup just installed> --ip … --key … --token …`,
+   with the box's real API token filled in — read from `secrets.json`); (b) the **5 DNS A-records** to add
+   (`api`/`cloud`/`git`/`matrix`/`meet`.<domain>) pointing at the box's LAN IP (home access) or the
+   router's public IP (public access + forward :443); (c) a **concise on-box command**
+   (`ping -c1 1.1.1.1 && hostname -I`) to find the box's IP + confirm internet, for when the host can't
+   see it (e.g. a wifi setup — after power-cycle the box is on a different radio/MAC/network). On the live
+   path (box already online) the DNS records and L3 command are printed with the real IP already filled in.
+   The suggested `--on` reflects the fine setup actually installed (`dash` passes `SP_SETUP`).
