@@ -213,3 +213,18 @@
    see it (e.g. a wifi setup — after power-cycle the box is on a different radio/MAC/network). On the live
    path (box already online) the DNS records and L3 command are printed with the real IP already filled in.
    The suggested `--on` reflects the fine setup actually installed (`dash` passes `SP_SETUP`).
+
+## Guided post-install finish (reboot → online → DNS → verify)
+124. After an install, the operator can be walked through the whole finish **interactively**
+   (`tools/finish_box_setup.sh`, offered automatically at the end of an interactive install and
+   runnable standalone later): (1) prompt to **reboot** the box (wifi-only: unplug the install cable);
+   (2) **wait** until it is reachable over SSH again (by `--ip`, or found by `--mac`, or typed in from
+   the console's `hostname -I`); (3) **confirm it booted the installed system** (secrets.json present,
+   not the in-RAM installer); (4) **verify internet**; (5) **read the box's public IP** (and LAN IP);
+   (6) print the **5 DNS A-records with that IP already filled in**; (7) ask **"did you enter them?"** and,
+   on yes, **verify they actually resolve** to that IP — querying PUBLIC resolvers (1.1.1.1 / 8.8.8.8) so
+   the laptop's cache or `/etc/hosts` can't mask the result. Each record is classified: ✓ matches the
+   public IP, ⚠ resolves to the box's LAN/private IP (home-only, not reachable from outside), ✗ wrong IP
+   or not propagated yet; a re-check loop handles propagation delay. On success it prints the ready L3
+   integration-test command. All CLI args explicit; `--domain`/`--key` required. Fully non-interactive
+   installs (CI/pipes) are unchanged — the guided finish is only offered when a terminal is present.
