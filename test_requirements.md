@@ -166,3 +166,35 @@
 ## Install UX — adapt to the target hardware
 118. Installing to a DIFFERENT physical device adapts automatically: before writing anything, the install checks whether the deploy flake's disks (by stable id) exist on the target and, on a mismatch, retargets the disk layout (+ netboot MAC pin) from the target's real hardware — asking ONCE, up front, which disk to WIPE. A disko pinned to one machine's serials isn't portable; the install adapts instead of failing with a cryptic disko error.
 119. The fine install setups are runnable ids: `install.lan-setup-0a..0d` / `install.usb-0a..0c` resolve to the coarse installer while recording the fine setup as the method. A setup that leaves the target on wifi (…-0b/0c/0d) requires a wifi spec (`--env WIFI_SSID=…`), verified in range by a non-disruptive scan (reqs 72–73) before anything is written.
+
+## End-to-end flow (install a box → test it) + where secrets live
+*(Visualised in the README: `docs/deployer.svg` = what the installer is made of + what you provide;
+`docs/flow.svg` = the 3 steps below.)*
+
+120. The whole flow is three steps; each prints what you feed the next:
+   - **0. Get ready** — cable the device to this laptop, boot it in UEFI network mode (it shows its MAC),
+     then start the address server: `sudo bash ~/netboot/start-netboot-server.sh` (leave it running).
+   - **1. Find the device** — `./dash find-target` → prints the target's MAC + IP, e.g.
+     `MAC 80:e8:2c:15:81:8b   IP 192.168.100.29`.
+   - **2. Install** — paste the MAC + IP from step 1:
+     ```
+     ./dash run install.lan-setup-0d \
+       --ip <IP-from-step-1> --key ~/.ssh/<your-key> \
+       --env FLAKE=<path to selfprivacy-altnet-deployer> \
+       --env MAC=<MAC-from-step-1> --env DOMAIN=<your-web-address e.g. selfprivacy.example.com> \
+       --env WIFI_SSID=<your-wifi-name> --env WIFI_PSK=<your-wifi-password> \
+       --env NETBOOT=auto --env TRANSPORT=none
+     ```
+     → it confirms which disk to WIPE `[y/N]`, installs, and prints `done` (auto-adapts disks + MAC to
+     this device; see reqs 116/118).
+   - **3. Test the running box** —
+     ```
+     ./dash run L3.connect.desktop --net https --on lan-setup-0d \
+       --ip <box-IP> --key ~/.ssh/<your-key> --token <box-api-token>
+     ```
+     → `pass` (green) = it works; `fail` (red) → the log says why.
+121. **Where sensitive data lives:** the wifi password, the box's API token, the TLS certificate and ssh
+   keys are written only into the deployer's `state/` folder on this computer. `state/` is git-ignored and
+   excluded from the mirror (`rsync --exclude state`), so it is never pushed/uploaded. To version it
+   safely too, lock the whole folder with ONE passphrase — `age -p` over a tar of `state/` → one
+   encrypted `state.age` (symmetric = post-quantum-adequate) that can go in a private repo.
