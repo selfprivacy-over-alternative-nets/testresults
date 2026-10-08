@@ -304,3 +304,11 @@
    reboots/prefix-changes; otherwise it prints the AAAA to set. The box's own Let's Encrypt provisions
    the cert. Caveat logged: visitors must also have IPv6. The route map lives in `docs/tunneling.puml`
    (rendered `docs/tunneling.svg`, referenced from `networks.md` → Tunneling) with the A–E scoring.
+138. **Public vs private IP must ALWAYS be explicit** — in every operator-facing message AND in the
+   code/comments. Any IP (or a command that yields one) is labelled either **LAN / private** (to connect
+   to the box over the local network — `hostname -I` → 192.168.x.x) or **public** (reachable from
+   anywhere, for DNS records / port-forward — `curl -s https://api.ipify.org` for IPv4, or
+   `ip -6 addr show scope global` for the public IPv6). Never ask for or print "the IP" unqualified.
+   Concretely: `finish_box_setup.sh` steps 1–2 ask for the box's **LAN IP** (only to SSH in) and read the
+   **public** IP themselves at step 5; DNS-record prompts state LAN (home-only) vs public (from-anywhere);
+   every `--ip` flag is the box's LAN/SSH address, never a public one.
