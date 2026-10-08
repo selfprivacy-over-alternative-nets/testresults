@@ -233,3 +233,74 @@
    time inside it (incl. DNS-propagation waits) never counts toward the install's recorded `duration_s`,
    so a clean install is never mis-marked `slow`. A standalone run of the installer (`stdout` is a tty)
    offers it inline instead. The two paths are mutually exclusive (keyed on whether stdout is a terminal).
+
+## HTTPS tunnels (public reachability without router access)
+125. A box behind double-NAT or a third-party gateway (no inbound port-forward possible) can still be
+   reached from the public internet by an **outbound tunnel the box dials itself** — nothing is forwarded
+   IN. `tools/add-cloudflare.sh` wires this up over SSH, offered interactively at the end of an install
+   (`e2e_install_native_ethernet.sh`) or run standalone later.
+126. It asks **three things, with no silent defaults**: (1) *Do you already have a paid domain?* → it
+   prints the exact DNS records to set; (2) *Do you want a free domain?* → a Cloudflare **quick** tunnel
+   needs none (random `*.trycloudflare.com`), or register a free **custom** domain at `https://nic.eu.org`
+   and pass it in; (3) *transport* = `cloudflare` (free), `ngrok` (free tier = random `*.ngrok-free.app`),
+   or `router` (free but needs admin on every NAT hop).
+127. **Cloudflare** transport: with no domain → an account-less **quick tunnel** fronting the
+   `api.<box-domain>` vhost only (URL is temporary, changes on restart); with a `--domain` → a
+   **headless named tunnel** — you create the tunnel in the Cloudflare dashboard on your laptop and paste
+   its **connector token** (`--cf-tunnel-token`); the box only runs `cloudflared tunnel run --token …`,
+   installed + started over SSH. The 5 public hostnames (api/cloud/git/matrix/meet) are added once in the
+   dashboard (each auto-creates its DNS CNAME). **Nothing is ever typed on the box** — no on-box
+   `cloudflared tunnel login`.
+128. **ngrok** transport: installs ngrok on the box (unfree → `--impure`), takes the free authtoken, runs
+   `ngrok http https://localhost:443` with the box's Host header; a custom domain is a paid ngrok feature
+   (called out explicitly).
+129. **router** transport: not automatable for arbitrary routers — it prints the port-forward
+   (`TCP 443 → <box-lan>:443`) + the 5 A-records at the public IP, and defers DNS verification to
+   `finish_box_setup.sh`.
+130. Whatever the transport, the tunnel runs as a **persistent systemd unit** on the box (cloudflared/ngrok
+   installed into root's nix profile = gc-rooted, survives reboot), and the script ends by printing the
+   app `--dart-define=HTTPS_DOMAIN=…` command and the `./dash run L3.connect.desktop --net https` line with
+   the box's real API token filled in.
+131. All CLI args explicit; `--key`/`--ip` required; a non-interactive run must pass every choice
+   (`--method`, `--domain-kind`, …) or fail fast — the same command reproduces the same setup for anyone.
+   Preflight refuses to run unless the box is reachable **and** is the installed system (`secrets.json`
+   present), not the in-RAM installer.
+132. The public-access choice is made **up-front**, at the "your web address" prompt in
+   `resolve_flake.sh` (right after the device is connected) — because the chosen method **decides the
+   domain**, and the domain is baked into the box at deploy time (vhost routing + LE cert); asking it at
+   the end would be too late. `add-cloudflare.sh --plan` asks the three questions with **no box needed**
+   and hands back `DOMAIN` + method (`PUBLIC_METHOD` / `PUBLIC_DOMAIN_KIND` / `PUBLIC_CF_NAMED`) as
+   `KEY=VALUE` on stdout; those flow via `--env` into the install and drive the end-of-install apply, so
+   the domain is never asked twice and a Cloudflare **custom** domain is consistent end-to-end. A quick
+   tunnel / free-ngrok / none keep the flake's **default** domain baked in — their public URL is decided
+   post-install (random `*.trycloudflare.com` / `*.ngrok-free.app`).
+133. The public-access apply is **embedded** and runs **entirely over SSH** — the operator never opens a
+   shell on the box. When a method was chosen up-front, `finish_box_setup.sh` (which already rebooted the
+   box, brought it online and discovered its IP) runs `add-cloudflare.sh` as its final **step 8** with
+   that IP; `dash` and `e2e_install_native_ethernet.sh` forward `--public-method` / `--public-cf-named`
+   to it. So `dash find-target` → install → finish → tunnel is one unbroken flow with **zero manual box
+   interaction**; the only human step for a named tunnel is pasting a Cloudflare token on the laptop.
+134. **Pinggy** transport (`--method pinggy`): an **SSH-based** tunnel the box dials out over `ssh -p 443
+   -R0:localhost:443 … a.pinggy.io` — **nothing to install** (ssh is already on the box), run as a
+   persistent systemd unit. Free tier = random `*.pinggy.link` with ~60-min sessions; a `--pinggy-token`
+   (pinggy.io account) makes it persistent + custom. Caveat logged: SelfPrivacy vhosts are Host-routed on
+   :443, so a Host-header rewrite may be needed for the api vhost.
+135. **LocalTunnel** transport (`--method localtunnel`): installs `nodePackages.localtunnel` (`lt`) into
+   the box's nix profile and runs `lt --port 443 --local-https --allow-invalid-cert --host
+   https://localtunnel.me [--subdomain <prefix>]` as a systemd unit → `https://<prefix>.loca.lt`. Caveats
+   logged: loca.lt shows a one-time browser interstitial (API/app clients send `Bypass-Tunnel-Reminder:
+   true`), and it fronts ONE endpoint (Host-routed cloud/git/… need separate tunnels).
+136. **Free-domain source** is a menu (`--domain-source`): **`eu-org`** (nic.eu.org — a real DELEGABLE
+   domain whose NS point to Cloudflare; works with a Cloudflare tunnel AND the router method, but SLOW
+   manual approval), **`duckdns`** / **`afraid`** (instant, but A/TXT only — **router method only**, they
+   can't host a Cloudflare tunnel's CNAME/NS), or **`other`**. The menu states these limits honestly and
+   steers tunnel users to `eu-org`. DuckDNS, when chosen for the router method, prints its dynamic-DNS
+   updater line (it maps a name to YOUR public IP — still needs :443 forwarded).
+137. **Direct IPv6** transport (`--method ipv6`): the only route that is reliable + no-port-forward AND
+   **decentralised** (no relay) — because IPv6 has no NAT to traverse. It reads the box's global IPv6
+   (`2000::/3`), fails fast with a clear message if the ISP is IPv4-only/CGNAT, and publishes an **AAAA**
+   record for the chosen domain — for a `*.duckdns.org` domain with `--duckdns-token` it installs a
+   persistent on-box updater (`duckdns-aaaa-sp`) that keeps the AAAA on the box's current IPv6 across
+   reboots/prefix-changes; otherwise it prints the AAAA to set. The box's own Let's Encrypt provisions
+   the cert. Caveat logged: visitors must also have IPv6. The route map lives in `docs/tunneling.puml`
+   (rendered `docs/tunneling.svg`, referenced from `networks.md` → Tunneling) with the A–E scoring.
