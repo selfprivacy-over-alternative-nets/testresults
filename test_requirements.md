@@ -312,3 +312,21 @@
    Concretely: `finish_box_setup.sh` steps 1–2 ask for the box's **LAN IP** (only to SSH in) and read the
    **public** IP themselves at step 5; DNS-record prompts state LAN (home-only) vs public (from-anywhere);
    every `--ip` flag is the box's LAN/SSH address, never a public one.
+139. **Tailscale Funnel** transport (`--method tailscale`): the recommended FREE way to reach the box
+   from any IPv4 visitor behind an uncontrolled router (CGNAT/double-NAT) without IPv6 or port-forward.
+   Installs tailscale on the box, runs `tailscaled --tun=userspace-networking` (no kernel TUN) as a
+   systemd unit, joins the tailnet with a one-time **auth key** (generated in the admin console — nothing
+   typed on the box), and `tailscale funnel https+insecure://localhost:443` → a **stable**
+   `https://<host>.<tailnet>.ts.net` with a valid cert. One-time admin-console prerequisites (HTTPS certs
+   + the `funnel` node attribute) are printed if Funnel isn't live. It's ONE hostname → the app connects
+   at the apex (`HTTPS_APEX`); the full api./cloud./… suite still needs a real domain + CF tunnel/forward.
+140. **IPv6 autodetect runs on the box's FINAL network, not the install path.** IPv6 is a property of the
+   network the box ends up on — which for `lan-setup-0c/0d` / usb variants can be a different wifi/router
+   than the install cable or the laptop — so a pre-install check is meaningless. `tools/net_lib.sh`
+   `box_global_ipv6` probes the box (post-reboot, in `finish_box_setup` step 4b) for a global-unicast
+   (`2000::/3`) address with working v6 egress on ANY interface, and says to re-run if the box later moves.
+141. **The box's domain is an install PARAMETER, never a hardcoded personal domain.** The deploy flake
+   reads `./domain.local` (tracked, generic default `selfprivacy.box`); the installer dirty-overwrites it
+   per deploy and restores the generic default afterwards, so a real/personal domain only ever enters as a
+   chosen value and never lands in the committed codebase. Cert source (`cert-source.local`) defaults to
+   `selfsigned` (any domain / tunnel), `external-le` when a real LE cert for the domain is injected.
