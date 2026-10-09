@@ -380,3 +380,30 @@
    a real domain + a Cloudflare NAMED tunnel (or router port-forward / direct IPv6). **Open TODO:** make
    the SelfPrivacy API nginx the `default_server` on the box so the funnel host reaches the API vhost in a
    browser too (deployer-module change + box rebuild).
+
+## North-star objective & reachability wait
+149. **NORTH STAR: the whole `find-target` → install → finish → public-access flow must work end-to-end
+   for a NON-TECHNICAL user ("grandma") on a random laptop and random home network, with ZERO manual
+   device fixing.** This is the point of the project — not getting one SelfPrivacy box up, but perfecting
+   the SCRIPTS so anyone can. Every rough edge hit while testing is a bug to fix **in the script** (wizard
+   / deployer / apply), never a one-off patch typed on the box by hand. The operator — human OR AI — must
+   not SSH into the box to make it work; if something only works after hand-fixing the device, the script
+   is not done. Success = the user runs the printed commands only, answers plain-language questions, waits,
+   and ends with a working public URL + the app connecting — understanding none of the internals. A
+   developer re-installing repeatedly is a tester, not the target user; artifacts that only appear from
+   repeated re-installs (e.g. duplicate tunnel identities) must be handled by the script, not blamed on
+   the user.
+150. **The apply WAITS until the box is actually reachable from the public internet, with visible
+   progress — it never stops at "serving on the box".** Serving locally ≠ publicly reachable: tunnel
+   providers (Tailscale Funnel, Cloudflare, …) publish public DNS for a NEW name minutes after it is
+   enabled. `add-cloudflare.sh` `wait_reachable()` polls the public URL FROM THE LAPTOP (which uses public
+   DNS, unlike the box's MagicDNS) until it responds — printing progress — up to a generous ceiling
+   (`SP_REACH_TIMEOUT`, default 600s), and only THEN presents the app command. Each attempt is shown as a
+   numbered check with elapsed time and a PLAIN reason derived from curl's exit code (6 = "address not
+   published yet (DNS)", 7 = "not accepting connections", 28 = "timed out", 35/60 = "TLS/cert warming up",
+   22 = "HTTP error") so the user sees it is actively doing something. Polling uses a GENTLE backoff
+   (10→30s) — ~20 checks over 10 min, not 40 — to avoid hammering DNS / the tunnel provider and tripping
+   rate limits. On timeout it explains in plain language and names the single likely cause (leftover
+   duplicate nodes from repeated re-installs — a testing artifact, not something a one-time setup hits).
+   The non-technical user just waits; they never debug DNS, delete nodes, or re-run by hand. (Applies to
+   every single-hostname tunnel method, not only tailscale.)
