@@ -330,3 +330,53 @@
    per deploy and restores the generic default afterwards, so a real/personal domain only ever enters as a
    chosen value and never lands in the committed codebase. Cert source (`cert-source.local`) defaults to
    `selfsigned` (any domain / tunnel), `external-le` when a real LE cert for the domain is injected.
+
+## Robust prompts & tunnel apply (hardened 2026-10-09)
+142. **Every interactive question validates its answer and re-asks until it's valid — it NEVER quits or
+   silently defaults on a bad answer.** A single typo must never drop the whole flow (losing all prior
+   answers). Only an explicit `n`/blank cancels where cancelling is meaningful; no-TTY / non-interactive
+   runs fail fast naming the exact flag to pass, instead of looping forever. Enforced across: the
+   `dash find-target` target pick + confirm; `resolve_flake.sh` (flake / network-setup / wifi SSID+PSK /
+   run-now); `add-cloudflare.sh` `run_wizard` AND the flag-fallback (`need()` re-asks until non-empty;
+   `ask_choice` re-asks fixed choices; domains validated via `is_domain`); `finish_box_setup.sh` (box LAN
+   IP validates four octets 0-255; the "added the records?"/"re-check?" gates via a `yesno` helper); the
+   `dash` "Finish setup now? [Y/n]" gate (an IP typed there re-asks with a hint, is not read as "no");
+   `make_keepass_db.sh` master-password (re-ask until non-empty + matching); `e2e_install_usb.sh`
+   device-path confirm (mismatch re-asks; blank aborts — it's a destructive erase, exact match required).
+143. **The Tailscale auth-key step is self-explanatory and self-verifying.** The prompt prints
+   step-by-step instructions (open the admin console, sign up if needed, Generate auth key, copy, paste),
+   rejects anything not starting `tskey-`, and VERIFIES the key the only way possible — by joining and
+   checking the box reaches `Running` — re-asking in place on failure. Keys are SINGLE-USE: a fresh key
+   is needed for every setup (tick **Reusable** for several boxes). A rejected key is distinguished from a
+   connectivity problem using the real `tailscale up` output, pointing at `journalctl -u tailscaled-sp`.
+144. **When a step can't be reliably automated, the script captures the EXACT action and walks the
+   operator through it — it never fails vaguely.** Enabling Tailscale Funnel is a one-time, browser-only,
+   tailnet-owner consent: the script captures the exact pre-filled `https://login.tailscale.com/f/funnel?
+   node=…` URL that `tailscale funnel` prints, shows click-by-click steps, waits, and retries until Funnel
+   actually serves. Blocking remote commands (`funnel --bg`, `up`) are `timeout`-capped so a prompt can
+   never hang the flow.
+145. **On-box services are installed the NixOS-correct way.** `/etc/systemd/system` is a read-only
+   Nix-store symlink, so imperative tunnel units are written to the writable `/run/systemd/system` and
+   `systemctl start`-ed (not `enable`-d). Caveat logged: `/run` is cleared on reboot, so re-run the apply
+   after a box reboot; true reboot-persistence would bake the unit into the deploy flake.
+146. **Re-running an apply is idempotent and non-destructive.** The Tailscale apply authenticates only
+   when the box isn't already on the tailnet — it polls `BackendState` after the (re)started daemon
+   reconnects (absorbing the race), never passes `--reset`, so it never logs the box out or spawns
+   duplicate nodes (`selfprivacy-1`, `-2`, …). `tailscale status --json` is parsed whitespace-tolerantly
+   (`"Key": "val"` has a space after the colon — a naive `":"` matcher silently never matches).
+147. **Every operator-facing command states WHICH DEVICE to run it on and is copy-paste-runnable.**
+   Commands that SSH into the box say "on THIS laptop" (never on the box); the printed Flutter command
+   includes `cd <…/selfprivacy.org.app> &&` so it runs from the app's own project root (where
+   `pubspec.yaml` is), not from `dev-dashboard`.
+148. **Single-hostname tunnels expose the API/app endpoint ONLY — set that expectation explicitly.**
+   tailscale / cloudflare-quick / ngrok-free / pinggy / localtunnel each give ONE public hostname.
+   Opening it in a browser shows the box's default nginx page at `/` and GraphiQL at `/graphql` — there
+   is NO web login page; the server is managed from the SelfPrivacy app (point it at the host with
+   `HTTPS_APEX=1`). The browser login frontends (`api.<domain>` → `/user`, Nextcloud `cloud.`, Forgejo
+   `git.`, …) are name-based nginx vhosts; a single hostname reaches the API vhost only if the Host header
+   matches `api.<domain>`, and **Tailscale Funnel cannot rewrite the Host header** (unlike ngrok /
+   cf-quick `--host-header`), so over Funnel only `/graphql` (which the default server also serves) is
+   reached and the app works while the browser frontends do not. Full browser / 5-subdomain access needs
+   a real domain + a Cloudflare NAMED tunnel (or router port-forward / direct IPv6). **Open TODO:** make
+   the SelfPrivacy API nginx the `default_server` on the box so the funnel host reaches the API vhost in a
+   browser too (deployer-module change + box rebuild).
