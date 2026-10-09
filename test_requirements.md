@@ -407,3 +407,31 @@
    duplicate nodes from repeated re-installs — a testing artifact, not something a one-time setup hits).
    The non-technical user just waits; they never debug DNS, delete nodes, or re-run by hand. (Applies to
    every single-hostname tunnel method, not only tailscale.)
+
+## Known limitation (single-hostname tunnels)
+151. **Live GraphQL subscriptions (WebSocket) don't work through a single-hostname tunnel yet — but
+   queries do, and this is NOT a find-target bug.** Over Tailscale Funnel (and the other one-name
+   tunnels) HTTP POST `/graphql` works, so the app connects and all one-shot data loads (domain, DNS,
+   disk, service list). The app's live views (Services/Jobs/Logs) open `wss://<apex>/graphql` and fail
+   with HTTP 400 "not upgraded to websocket". Same family as req 148: the funnel forwards `Host: *.ts.net`
+   which doesn't reach the `api.<domain>` vhost carrying the websocket-upgrade proxy config, and the WS
+   upgrade over the tunnel isn't negotiated. (Not reproducible with curl — curl negotiates the upgrade
+   differently and gets 200 GraphiQL — so the precise failure point is unconfirmed.) The box API serves
+   subscriptions fine on the LAN / `api.` vhost; this is a SelfPrivacy-stack/deployer gap, not the
+   find-target flow. Candidate fix (deployer, needs redeploy + a real WS-client test): make the API vhost
+   the `default_server` WITH the `Upgrade`/`Connection` headers so any Host — incl. the funnel apex —
+   gets full API incl. subscriptions.
+   **RESOLVED (root cause was NOT missing config):** the onion/default vhost's `/graphql` ALREADY has
+   `proxyWebsockets = true` in `selfprivacy-tor-core.nix` (commit 6666528). The box lacked it because the
+   deployer's `spbackend` `path:` input in `flake.lock` was **stale** (pinned pre-6666528 content) — so
+   every reinstall deployed the old backend. Re-locking `spbackend` fixed it; `nix eval` confirms
+   `virtualHosts.onion.locations."/graphql".proxyWebsockets == true`, so the Funnel apex now serves
+   subscriptions. Tailscale was never the limitation. See req 152.
+152. **A `path:` flake input must never silently deploy STALE source.** The deployer pins the Manager
+   backend (`spbackend`) as a `path:` input; its `flake.lock` narHash does NOT auto-update when the
+   backend changes, so committed backend fixes (e.g. the onion `/graphql` websocket upgrade) never reached
+   the box until the lock was manually re-locked — a silent reproducibility hole that invalidated testing.
+   Requirement: before an install/deploy, the deployer's `spbackend` (and any `path:` input) lock must be
+   verified fresh against the current committed source — re-lock, or GATE like req 40/41 does for
+   selfprivacy-api (fail/warn when `flake.lock` ≠ the checkout). A deploy must reflect the committed source,
+   not a stale pin.
