@@ -435,3 +435,20 @@
    verified fresh against the current committed source — re-lock, or GATE like req 40/41 does for
    selfprivacy-api (fail/warn when `flake.lock` ≠ the checkout). A deploy must reflect the committed source,
    not a stale pin.
+
+## Deploy-config completeness & explicit launch
+153. **The deploy seed must provide EVERY `userdata.json` key the API resolvers read.** A missing key is
+   a direct `KeyError` in a Strawberry resolver → the query returns `data: null` → the app's screen
+   skeleton-loads forever (looks like "won't load", not an error). Concretely: `get_system_domain_info`
+   (`selfprivacy_api/.../system.py`) reads `user_data["domain"|"hostname"|"dns"]["provider"]`; the seed
+   (`secrets-seed.nix`) omitted `hostname` → `KeyError('hostname')` → the Domain&DNS "required DNS records"
+   screen hung on skeletons. Fix = seed `hostname` (domain's first label). GENERAL rule: userdata
+   completeness is part of deploy correctness; after install, smoke-test the key app queries
+   (`system.domainInfo`, `services.allServices`, …) return non-null so a missing field can't silently hang
+   the UI.
+154. **`./dash app` requires every launch value EXPLICITLY — no cache, no auto-resolve (reinforces req 2).**
+   It launches the Flutter app against the box's PUBLIC url (works from anywhere — the app reaches the box
+   over the tunnel, not the LAN). Mandatory: `--domain`, `--token`, and `--apex`|`--no-apex`. It must NOT
+   cache the target to a state file, must NOT SSH the box to auto-resolve the url/token, must NOT reuse a
+   prior value — so the printed command is fully reproducible and can't silently hit a stale target (the
+   `selfprivacy-5` vs `-6` trap). Auto-finding the local Flutter checkout dir (a derived local path) is OK.
